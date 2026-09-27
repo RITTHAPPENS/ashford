@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashford Formula Deutschland | Betonverdichter für Industrieböden</title>
+<meta name="description" content="Ashford Formula macht Betonböden dauerhaft staubfrei, härter und abriebfester. Exklusiv in Deutschland über Beltex Commerce, ausgeführt von zertifizierten Fachbetrieben.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#E3121B;
+  --red-dark:#B80E15;
+  --ink:#1C1C1A;
+  --ink-soft:#3A3A37;
+  --muted:#62625D;
+  --grey:#F4F4F2;
+  --grey-2:#EAEAE6;
+  --line:#DFDFDA;
+  --white:#fff;
+  --radius:4px;
+  --wrap:1200px;
+  --head:"Archivo",system-ui,sans-serif;
+  --body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{overflow-x:hidden;font-family:var(--body);color:var(--ink);background:var(--white);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.section{padding:110px 0}
+.section--grey{background:var(--grey)}
+.eyebrow{display:inline-block;font-family:var(--head);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.h2{font-size:clamp(30px,3.6vw,46px);font-weight:800;margin-bottom:20px}
+.lead{font-size:19px;color:var(--ink-soft);max-width:680px}
+.center{text-align:center}
+.center .lead{margin:0 auto}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:15px;letter-spacing:.02em;padding:15px 26px;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn svg{width:16px;height:16px;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+.btn--red{background:var(--red);color:#fff}
+.btn--red:hover{background:var(--red-dark)}
+.btn--ghost{border-color:rgba(255,255,255,.7);color:#fff}
+.btn--ghost:hover{background:#fff;color:var(--ink)}
+.btn--dark{border-color:var(--ink);color:var(--ink)}
+.btn--dark:hover{background:var(--ink);color:#fff}
+
+/* Topbar */
+.topbar{background:var(--ink);color:#cfcfca;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;gap:20px}
+.topbar strong{color:#fff;font-weight:600}
+.topbar a:hover{color:#fff}
+.topbar__links{display:flex;gap:24px}
+
+/* Header */
+.header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .25s}
+.header.is-scrolled{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.logo img{height:46px;width:auto}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{font-family:var(--head);font-weight:600;font-size:15px;position:relative;padding:6px 0}
+.nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--red);transition:width .25s}
+.nav a:not(.btn):hover::after{width:100%}
+.nav .btn{padding:12px 20px;color:#fff}
+
+/* Dropdown */
+.dd{position:relative}
+.dd__toggle{display:inline-flex!important;align-items:center;gap:6px}
+.chev{width:14px;height:14px;transition:transform .25s}
+.dd:hover .chev,.dd:focus-within .chev{transform:rotate(180deg)}
+.dd__menu{position:absolute;top:calc(100% + 22px);left:-24px;min-width:290px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--red);border-radius:0 0 var(--radius) var(--radius);box-shadow:0 18px 40px rgba(0,0,0,.1);padding:10px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s}
+.dd__menu::before{content:"";position:absolute;left:0;right:0;top:-26px;height:26px}
+.dd:hover .dd__menu,.dd:focus-within .dd__menu{opacity:1;visibility:visible;transform:none}
+.dd__menu a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 24px!important;font-size:15px}
+.dd__menu a::after{display:none}
+.dd__menu a:hover{background:var(--grey);color:var(--red)}
+.dd__menu small{font-family:var(--body);font-weight:400;font-size:12px;color:var(--muted)}
+.dd__menu .dd__all{border-bottom:1px solid var(--line);margin-bottom:6px;padding-bottom:12px!important;color:var(--red)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px auto;transition:transform .25s,opacity .25s}
+
+/* Hero */
+.hero{position:relative;min-height:calc(100vh - 122px);max-height:860px;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero__bg{position:absolute;inset:0;background:url(assets/hero-halle.jpg) center 60%/cover no-repeat;animation:zoom 18s ease-out forwards}
+@keyframes zoom{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,15,14,.85) 0%,rgba(15,15,14,.55) 55%,rgba(15,15,14,.2) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:60px;padding-bottom:110px}
+.hero .eyebrow{color:#fff;background:var(--red);padding:6px 12px;border-radius:2px}
+.hero h1{font-size:clamp(40px,6vw,76px);font-weight:800;max-width:820px;margin-bottom:24px}
+.hero p{font-size:20px;max-width:600px;color:#e8e8e4;margin-bottom:36px}
+.hero__btns{display:flex;flex-wrap:wrap;gap:14px}
+.hero__badge{margin-top:34px;width:fit-content;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.1);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);padding:12px 18px;border-radius:var(--radius);font-size:14px}
+.hero__badge b{font-family:var(--head);white-space:nowrap}
+.hero__scroll{position:absolute;left:50%;bottom:26px;z-index:3;width:26px;height:42px;border:2px solid rgba(255,255,255,.6);border-radius:14px;transform:translateX(-50%)}
+.hero__scroll::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;background:#fff;border-radius:2px;transform:translateX(-50%);animation:scroll 1.8s infinite}
+@keyframes scroll{0%{opacity:0;top:6px}40%{opacity:1}100%{opacity:0;top:22px}}
+
+/* Stats */
+.stats{background:var(--red);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:38px 24px;border-right:1px solid rgba(255,255,255,.25)}
+.stat:last-child{border-right:0}
+.stat__num{font-family:var(--head);font-weight:800;font-size:clamp(28px,3vw,42px);line-height:1;white-space:nowrap}
+.stat__label{font-size:15px;margin-top:10px;opacity:.92}
+
+/* Intro */
+.intro{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+.intro__img{position:relative}
+.intro__img img{border-radius:var(--radius);aspect-ratio:4/3.3;object-fit:cover;width:100%}
+.intro__img::before{content:"";position:absolute;left:-18px;top:-18px;width:120px;height:120px;border-left:6px solid var(--red);border-top:6px solid var(--red)}
+.intro__tag{position:absolute;right:-20px;bottom:30px;background:#fff;padding:22px 26px;box-shadow:0 16px 40px rgba(0,0,0,.12);border-radius:var(--radius);max-width:240px}
+.intro__tag b{display:block;font-family:var(--head);font-size:34px;color:var(--red);line-height:1}
+.intro__tag span{font-size:14px;color:var(--muted)}
+.intro p{margin-bottom:18px;color:var(--ink-soft)}
+.intro .btn{margin-top:14px}
+
+/* Vorteile */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);margin-top:60px;border:1px solid var(--line)}
+.benefit{background:#fff;padding:44px 36px;position:relative;transition:background .25s}
+.benefit:hover{background:var(--grey)}
+.benefit__no{font-family:var(--head);font-weight:800;font-size:15px;color:var(--red);letter-spacing:.08em}
+.benefit__big{font-family:var(--head);font-weight:800;font-size:44px;line-height:1;margin:18px 0 6px}
+.benefit h3{font-size:21px;font-weight:700;margin-bottom:12px}
+.benefit p{color:var(--muted);font-size:16px}
+.benefit::after{content:"";position:absolute;left:36px;bottom:0;width:0;height:3px;background:var(--red);transition:width .35s}
+.benefit:hover::after{width:calc(100% - 72px)}
+
+/* Wirkweise */
+.how{display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:center}
+.how p{color:var(--ink-soft);margin-bottom:18px}
+.how__list{list-style:none;margin-top:10px}
+.how__list li{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.how__list li::before{content:"";flex:0 0 10px;height:10px;margin-top:8px;background:var(--red);border-radius:50%}
+.pores{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pores figure{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.pores svg{width:100%;height:auto;display:block;border-radius:2px}
+.pores figcaption{font-family:var(--head);font-weight:700;font-size:15px;margin-top:14px}
+.pores figcaption span{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:14px;margin-top:2px}
+
+/* Einsatzbereiche */
+.areas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.area{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;color:#fff;display:flex;align-items:flex-end}
+.area img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.area::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.8) 100%)}
+.area:hover img{transform:scale(1.06)}
+.area__txt{position:relative;z-index:2;padding:26px}
+.area h3{font-size:21px;margin-bottom:6px}
+.area p{font-size:14px;color:#ddd;line-height:1.5}
+
+
+/* Weitere Einsatzbereiche */
+.more{margin-top:44px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 38px}
+.more__title{font-family:var(--head);font-weight:700;font-size:18px;margin-bottom:18px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{font-size:15px;padding:8px 16px;border:1px solid var(--line);border-radius:40px;background:var(--grey);transition:border-color .2s,color .2s}
+.chips li:hover{border-color:var(--red);color:var(--red)}
+.chips .chips__etc{background:none;border-style:dashed;color:var(--muted)}
+.more__book{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line);flex-wrap:wrap}
+.more__book b{display:block;font-family:var(--head);font-size:18px}
+.more__book span{color:var(--muted);font-size:15px}
+
+/* Produkte */
+.products-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
+.product{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.product:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.09)}
+.product__img{aspect-ratio:16/10;overflow:hidden;position:relative}
+.product__img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.product:hover .product__img img{transform:scale(1.05)}
+.product__cat{position:absolute;left:16px;top:16px;background:#fff;font-family:var(--head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:2px}
+.product__cat--v{color:var(--red)}
+.product__body{padding:28px;display:flex;flex-direction:column;flex:1}
+.product h3{font-size:24px;margin-bottom:10px}
+.product h3 sup{font-size:.5em;font-weight:600;vertical-align:top;position:relative;top:.3em}
+.product p{color:var(--muted);font-size:16px;margin-bottom:22px;flex:1}
+.product__links{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:18px;font-family:var(--head);font-weight:700;font-size:14px}
+.product__links a{display:inline-flex;align-items:center;gap:8px}
+.product__links a:first-child{color:var(--red)}
+.product__links svg{width:16px;height:16px}
+.product__links .soon{color:var(--muted);font-weight:500}
+
+/* Anwendung */
+.steps{margin-top:70px;display:flex;flex-direction:column;gap:80px}
+.step{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.step:nth-child(even) .step__img{order:2}
+.step__img{position:relative}
+.step__img img{border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;width:100%}
+.step__no{position:absolute;top:-26px;left:-26px;width:72px;height:72px;background:var(--red);color:#fff;font-family:var(--head);font-weight:800;font-size:28px;display:grid;place-items:center;border-radius:var(--radius)}
+.step:nth-child(even) .step__no{left:auto;right:-26px}
+.step h3{font-size:30px;margin-bottom:16px}
+.step p{color:var(--ink-soft);font-size:18px}
+.step__meta{display:inline-block;margin-top:18px;background:var(--grey);border-left:3px solid var(--red);padding:10px 16px;font-size:15px;color:var(--ink-soft)}
+
+/* Video */
+.video{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/8;margin-top:56px;cursor:pointer;background:#000}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .3s,transform .6s}
+.video:hover img{opacity:.55;transform:scale(1.03)}
+.video__bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,#3a3a37 0,#1C1C1A 70%)}
+.video__bg::after{content:"";position:absolute;inset:0;background:url(assets/hero-halle.jpg) center/cover;opacity:.28;transition:opacity .4s,transform .6s}
+.video:hover .video__bg::after{opacity:.2;transform:scale(1.03)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
+.video__play{position:absolute;left:50%;top:50%;z-index:2;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(227,18,27,.6);animation:pulse 2.2s infinite}
+.video__play svg{width:34px;height:34px;fill:#fff;margin-left:6px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,18,27,.55)}70%{box-shadow:0 0 0 26px rgba(227,18,27,0)}100%{box-shadow:0 0 0 0 rgba(227,18,27,0)}}
+.video__label{z-index:2;position:absolute;left:30px;bottom:26px;color:#fff;font-family:var(--head);font-weight:700;font-size:20px}
+.video__label span{display:block;font-family:var(--body);font-weight:400;font-size:14px;opacity:.8}
+
+/* Ablauf */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;counter-reset:flow}
+.flow__item{position:relative;padding:0 26px 0 0}
+.flow__item::before{counter-increment:flow;content:counter(flow);display:grid;place-items:center;width:58px;height:58px;border-radius:50%;border:2px solid var(--red);color:var(--red);font-family:var(--head);font-weight:800;font-size:22px;background:var(--grey);position:relative;z-index:2;margin-bottom:24px;transition:background .3s,color .3s}
+.flow__item:hover::before{background:var(--red);color:#fff}
+.flow__item::after{content:"";position:absolute;top:29px;left:58px;right:0;height:2px;background:var(--line)}
+.flow__item:last-child::after{display:none}
+.flow h3{font-size:20px;margin-bottom:10px}
+.flow p{color:var(--muted);font-size:16px}
+.note{margin-top:56px;display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);padding:24px 28px;border-radius:var(--radius)}
+.note svg{flex:0 0 28px;width:28px;height:28px;color:var(--red)}
+.note p{color:var(--ink-soft)}
+
+/* Projekte */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px;margin-top:56px}
+.gallery a{position:relative;overflow:hidden;border-radius:var(--radius);display:block}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery a::after{content:"";position:absolute;inset:0;background:rgba(227,18,27,.0);transition:background .3s}
+.gallery a:hover img{transform:scale(1.06)}
+.gallery a:hover::after{background:rgba(20,20,20,.25)}
+.g-wide{grid-column:span 2}
+.g-tall{grid-row:span 2}
+.lightbox{position:fixed;inset:0;background:rgba(10,10,10,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:40px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-height:88vh;max-width:92vw;border-radius:var(--radius)}
+.lightbox button{position:absolute;top:22px;right:26px;background:none;border:0;color:#fff;font-size:40px;line-height:1;cursor:pointer}
+
+/* Nachhaltig */
+.green-wrap{transform:translateY(-50%);position:relative;z-index:3}
+.green{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:40px 44px}
+.green__icon{width:74px;height:74px;border-radius:50%;background:#EAF3EC;display:grid;place-items:center}
+.green__icon svg{width:36px;height:36px;color:#2F7D46}
+.green h3{font-size:24px;margin-bottom:8px}
+.green p{color:var(--muted)}
+
+/* Downloads */
+.downloads{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:50px}
+.dl{display:flex;align-items:center;gap:18px;padding:20px 24px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);transition:border-color .2s,transform .2s}
+.dl:hover{border-color:var(--red);transform:translateX(4px)}
+.dl__icon{flex:0 0 44px;height:52px;border:2px solid var(--ink);border-radius:3px;position:relative;display:grid;place-items:end center;padding-bottom:6px;font-family:var(--head);font-weight:800;font-size:10px}
+.dl__icon::before{content:"";position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:var(--grey);border-left:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.dl__icon span{background:var(--red);color:#fff;padding:1px 4px;border-radius:2px}
+.dl b{font-family:var(--head);display:block;font-size:17px}
+.dl small{color:var(--muted);font-size:14px}
+.dl--soon{opacity:.55;pointer-events:none}
+
+/* Kontakt */
+.contact{position:relative;color:#fff;overflow:hidden}
+.contact__bg{position:absolute;inset:0;background:#1C1C1A}
+.contact::before{content:"";position:absolute;inset:0;background:rgba(20,20,19,.88);z-index:1}
+.contact .wrap>*{min-width:0}
+.contact .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.15fr;gap:70px;align-items:start}
+.contact .eyebrow{color:#ff5a60}
+.contact p{color:#d6d6d1;margin-bottom:28px}
+.contact__info{list-style:none;border-top:1px solid rgba(255,255,255,.15)}
+.contact__info li{display:flex;gap:16px;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.contact__info svg{width:22px;height:22px;color:var(--red);flex:0 0 22px}
+.contact__info small{display:block;color:#9d9d98;font-size:13px}
+.form{width:100%;min-width:0;background:#fff;color:var(--ink);padding:40px;border-radius:var(--radius)}
+.form h3{font-size:24px;margin-bottom:6px}
+.form>p{color:var(--muted);font-size:15px;margin-bottom:24px}
+.form__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field--full{grid-column:1/-1}
+.field label{font-family:var(--head);font-weight:600;font-size:14px}
+.field input,.field select,.field textarea{width:100%;min-width:0;font:inherit;font-size:16px;padding:13px 14px;border:1px solid var(--line);border-radius:var(--radius);background:var(--grey);transition:border-color .2s,background .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--red);background:#fff}
+.field textarea{min-height:110px;resize:vertical}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink-soft);grid-column:1/-1}
+.check input{flex:0 0 18px;margin-top:3px;accent-color:var(--red);width:18px;height:18px}
+.check a{text-decoration:underline}
+.form .btn{margin-top:8px;width:100%;justify-content:center}
+.toast{position:fixed;left:50%;bottom:30px;opacity:0;pointer-events:none;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:16px 24px;border-radius:var(--radius);box-shadow:0 12px 30px rgba(0,0,0,.25);transition:transform .35s;z-index:120;font-size:15px}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+/* Footer */
+.footer{background:#121211;color:#a9a9a4;font-size:15px}
+.footer__top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:50px;padding:80px 0 60px}
+.footer img{height:44px;width:auto;margin-bottom:22px}
+.footer h4{color:#fff;font-size:16px;margin-bottom:18px}
+.footer ul{list-style:none}
+.footer li{margin-bottom:10px}
+.footer a:hover{color:#fff}
+.partner{border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:22px}
+.partner small{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.partner__img{height:auto!important;width:100%;max-width:220px;margin:4px 0 0!important}
+.partner__logo{font-family:var(--head);font-weight:800;font-size:22px;color:#fff;letter-spacing:.04em;border:1px dashed rgba(255,255,255,.35);padding:14px;text-align:center;border-radius:3px}
+.partner__logo span{display:block;font-size:11px;font-weight:500;letter-spacing:.1em;color:#8a8a85;margin-top:4px}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.1);padding:24px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px}
+.footer__bottom nav{display:flex;gap:22px}
+
+
+/* Bild-Platzhalter */
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:24px 28px;background:repeating-linear-gradient(135deg,#ECECE8 0 14px,#E4E4DF 14px 28px);color:var(--muted);border:2px dashed #C9C9C3;border-radius:var(--radius)}
+.ph svg{width:34px;height:34px;color:var(--red)}
+.ph b{font-family:var(--head);font-size:15px;color:var(--ink);letter-spacing:.02em}
+.ph span{font-size:14px;line-height:1.5;max-width:340px}
+.ph--dark{background:repeating-linear-gradient(135deg,#2A2A28 0 14px,#232321 14px 28px);border-color:#4A4A46;color:#B5B5AF}
+.ph--dark b{color:#fff}
+.intro__img,.step__img{min-height:320px}
+.intro__img .ph,.step__img .ph{position:relative;min-height:340px;height:100%}
+.product__img .ph{border-width:0 0 2px}
+.area .ph{justify-content:flex-start;padding-top:40px;background:repeating-linear-gradient(135deg,#3A3A37 0 14px,#333330 14px 28px);border:0;color:#C8C8C2}
+.area .ph b{color:#fff}
+.area .ph span{font-size:13px}
+.video .ph{border-radius:0;border:0;justify-content:flex-start;padding-top:48px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal.is-in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}
+
+/* Responsive */
+@media (max-width:1080px){
+  .nav{position:fixed;inset:122px 0 auto 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:10px 24px 26px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .35s;z-index:40}
+  .nav.is-open{transform:none}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .nav .btn{margin-top:16px;justify-content:center}
+  .burger{display:block}
+  .dd__toggle{width:100%;justify-content:space-between}
+  .dd__menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;border-left:2px solid var(--red);border-radius:0;min-width:0;padding:0;margin:0 0 6px 4px;display:none}
+  .dd.is-open .dd__menu{display:block}
+  .dd.is-open .chev{transform:rotate(180deg)}
+  .dd__menu::before{display:none}
+  .dd__menu a{border-bottom:0!important;padding:9px 16px!important}
+  .nav{max-height:calc(100vh - 122px);overflow-y:auto}
+
+  .burger.is-open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .burger.is-open span:nth-child(2){opacity:0}
+  .burger.is-open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  .intro,.how,.contact .wrap{grid-template-columns:1fr;gap:50px}
+  .areas{grid-template-columns:repeat(2,1fr)}
+  .products{grid-template-columns:repeat(2,1fr)}
+  .footer__top{grid-template-columns:1fr 1fr}
+  .flow{grid-template-columns:1fr 1fr;row-gap:44px}
+  .flow__item:nth-child(2)::after{display:none}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .section{padding:76px 0}
+  .topbar__links{display:none}
+  .topbar .wrap{justify-content:center;text-align:center}
+  .header .wrap{height:72px}
+  .nav{inset:110px 0 auto 0}
+  .logo img{height:38px}
+  .hero{min-height:620px}
+  .hero p{font-size:17px}
+  .hero__badge{font-size:13px;margin-top:26px}
+  .hero__scroll{display:none}
+  .stats .wrap{grid-template-columns:1fr 1fr;padding:0}
+  .stat{border-bottom:1px solid rgba(255,255,255,.25);padding:26px 18px;min-width:0}
+  .stat__num{font-size:22px}
+  .stat__label{font-size:13px}
+  .stat:nth-child(2){border-right:0}
+  .benefits,.products,.downloads{grid-template-columns:1fr}
+  .benefit{padding:34px 26px}
+  .intro__tag{right:10px;bottom:-24px}
+  .intro__img::before{display:none}
+  .pores{grid-template-columns:1fr}
+  .step,.step:nth-child(even){grid-template-columns:1fr;gap:40px}
+  .step:nth-child(even) .step__img{order:0}
+  .step__no,.step:nth-child(even) .step__no{left:14px;right:auto;top:-22px;width:60px;height:60px;font-size:24px}
+  .step h3{font-size:25px}
+  .video{aspect-ratio:4/3}
+  .video__play{width:74px;height:74px}
+  .flow{grid-template-columns:1fr}
+  .flow__item::after{display:none}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .g-wide{grid-column:span 2}
+  .g-tall{grid-row:span 2}
+  .green{grid-template-columns:1fr;padding:30px;text-align:left}
+  .green-wrap{transform:none;margin-top:50px}
+  #projekte{padding-bottom:76px!important}
+  .form{padding:28px 22px}
+  .more{padding:26px 22px}
+  .chips li{font-size:14px;padding:7px 13px}
+  .form__grid{grid-template-columns:1fr}
+  .footer__top{grid-template-columns:1fr;gap:36px}
+}
+@media (min-width:761px) and (max-height:860px){
+  .hero .wrap{padding-top:34px;padding-bottom:56px}
+  .hero h1{font-size:clamp(38px,4.6vw,58px);margin-bottom:16px}
+  .hero p{font-size:18px;margin-bottom:26px}
+  .hero__badge{margin-top:24px}
+  .hero__scroll{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="wrap">
+    <span>Exklusiv in Deutschland über <strong>Beltex Commerce</strong></span>
+    <div class="topbar__links">
+      <a href="mailto:info@beltex.org">info@beltex.org</a>
+      <a href="downloads/">Datenblätter</a>
+      <a href="kontakt/">Rückruf anfordern</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a href="./" class="logo" aria-label="Ashford Formula Startseite"><img src="assets/ashford-formula-logo.png" alt="Ashford Formula"></a>
+    <nav class="nav" id="nav">
+      <div class="dd">
+        <a href="produkte/" class="dd__toggle">Produkte <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="dd__menu">
+          <a href="produkte/" class="dd__all">Alle Produkte im Überblick</a>
+          <a href="produkte/ashford-formula/"><b>Ashford Formula</b><small>Verdichten</small></a>
+          <a href="produkte/retroplate/"><b>RetroPlate</b><small>Verdichten &amp; Polieren</small></a>
+          <a href="produkte/retroguard/"><b>RetroGuard</b><small>Imprägnieren</small></a>
+          <a href="produkte/retropel/"><b>RetroPel</b><small>Imprägnieren</small></a>
+          <a href="produkte/creteclean/"><b>CreteClean</b><small>Reinigen</small></a>
+          <a href="produkte/cretefill/"><b>CreteFill</b><small>Reparieren</small></a>
+        </div>
+      </div>
+      <a href="anwendung/">Anwendung</a>
+      <a href="projekte/">Projekte</a>
+      <a href="downloads/">Downloads</a>
+      <a href="kontakt/" class="btn btn--red">Kontakt</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="wrap">
+    <span class="eyebrow">Der Original-Betonverdichter seit 1949</span>
+    <h1>Betonböden, die hart bleiben. Und staubfrei.</h1>
+    <p>Ashford Formula zieht in die Betonoberfläche ein und macht sie dauerhaft abriebfest und staubbindend. Eine einzige Behandlung, die über Jahrzehnte wirkt.</p>
+    <div class="hero__btns">
+      <a href="#kontakt" class="btn btn--red">Projekt anfragen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="#wirkweise" class="btn btn--ghost">So funktioniert es</a>
+    </div>
+    <div class="hero__badge"><b>20 Jahre</b> Produktgarantie bei Ausführung durch zertifizierte Fachbetriebe</div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"></div>
+</section>
+
+<!-- Zahlen -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="stat__num">seit 1949</div><div class="stat__label">weltweit bewährt</div></div>
+    <div class="stat"><div class="stat__num"><span data-count="460000">460.000</span> m²</div><div class="stat__label">in Deutschland behandelt</div></div>
+    <div class="stat"><div class="stat__num"><span data-count="20">20</span> Jahre</div><div class="stat__label">Produktgarantie</div></div>
+    <div class="stat"><div class="stat__num">1×</div><div class="stat__label">auftragen, dauerhaft geschützt</div></div>
+  </div>
+</section>
+
+<!-- Intro -->
+<section class="section" id="ueber">
+  <div class="wrap intro">
+    <div class="intro__img reveal">
+      <img src="assets/intro-halle.jpg" alt="Große Halle mit verdichtetem, glänzendem Betonboden" loading="lazy">
+      <div class="intro__tag"><b>Seit 2019</b><span>exklusiv in Deutschland über Beltex Commerce</span></div>
+    </div>
+    <div class="reveal reveal-d1">
+      <span class="eyebrow">Über Ashford Formula</span>
+      <h2 class="h2">Kein Anstrich, sondern ein Teil des Betons</h2>
+      <p>Beschichtungen liegen auf dem Beton und nutzen sich mit der Zeit ab. Ashford Formula funktioniert anders. Die Flüssigkeit dringt in die oberste Schicht ein, reagiert dort mit den Bestandteilen des Zements und schließt Poren und feine Kapillaren von innen.</p>
+      <p>Das Ergebnis ist eine dichte, harte Oberfläche, die keinen Staub mehr abgibt und sich leicht sauber halten lässt. Entwickelt und hergestellt wird Ashford Formula von Curecrete in Utah, USA. In Deutschland ist Beltex Commerce Ihr Ansprechpartner.</p>
+      <a href="produkte/" class="btn btn--dark">Zu den Produkten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Vorteile -->
+<section class="section section--grey" id="vorteile">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Ihre Vorteile</span>
+      <h2 class="h2">Was ein behandelter Boden besser kann</h2>
+      <p class="lead">Die Werte stammen aus Vergleichsprüfungen mit unbehandeltem Beton. Im Alltag heißt das: weniger Reinigung, weniger Verschleiß und kein Staub auf Ware und Maschinen.</p>
+    </div>
+    <div class="benefits">
+      <div class="benefit reveal"><span class="benefit__no">01</span><div class="benefit__big"><span data-count="100">100</span> %</div><h3>staubfrei</h3><p>Der Boden gibt keinen Zementstaub mehr ab. Das schont Mitarbeiter, empfindliche Technik und gelagerte Produkte.</p></div>
+      <div class="benefit reveal reveal-d1"><span class="benefit__no">02</span><div class="benefit__big"><span data-count="33">33</span> %</div><h3>abriebfester</h3><p>Stapler, Hubwagen und Palettenverkehr hinterlassen deutlich weniger Spuren als auf unbehandeltem Beton.</p></div>
+      <div class="benefit reveal reveal-d2"><span class="benefit__no">03</span><div class="benefit__big"><span data-count="38">38</span> %</div><h3>härter</h3><p>Die Oberfläche wird spürbar widerstandsfähiger, auch gegen Stöße und punktuelle Belastung.</p></div>
+      <div class="benefit reveal"><span class="benefit__no">04</span><div class="benefit__big">1×</div><h3>behandeln</h3><p>Kein Nachstreichen, keine neue Beschichtung nach ein paar Jahren. Die Wirkung bleibt im Beton.</p></div>
+      <div class="benefit reveal reveal-d1"><span class="benefit__no">05</span><div class="benefit__big">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M3 21h18M6 21V10l6-6 6 6v11"/><path d="M10 21v-5h4v5"/></svg></div><h3>Leicht zu reinigen</h3><p>Auf der geschlossenen Oberfläche hält sich Schmutz schlecht. Eine Scheuersaugmaschine mit passendem Reiniger genügt.</p></div>
+      <div class="benefit reveal reveal-d2"><span class="benefit__no">06</span><div class="benefit__big"><span data-count="20">20</span> J.</div><h3>Garantie</h3><p>Übernimmt ein zertifizierter Fachbetrieb die Ausführung, erhalten Sie auf Wunsch eine Garantieerklärung über 20 Jahre.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Wirkweise -->
+<section class="section" id="wirkweise">
+  <div class="wrap how">
+    <div class="reveal">
+      <span class="eyebrow">Wirkweise</span>
+      <h2 class="h2">Was im Beton passiert</h2>
+      <p>Frischer Beton ist voller winziger Hohlräume. Dort sammeln sich Wasser und Schmutz, und an der Oberfläche löst sich nach und nach feiner Staub.</p>
+      <p>Ashford Formula reagiert mit dem Calciumhydroxid im Beton und bildet feste Kristalle genau an diesen Stellen. Die oberste Schicht wird dadurch dicht und hart.</p>
+      <ul class="how__list">
+        <li>Der Beton bleibt diffusionsoffen, Feuchtigkeit kann weiterhin entweichen.</li>
+        <li>Es entsteht keine Schicht, die sich ablösen oder abplatzen kann.</li>
+        <li>Mit der täglichen Nutzung wird die Oberfläche dichter und bekommt einen leichten Glanz.</li>
+      </ul>
+    </div>
+    <div class="pores reveal reveal-d1">
+      <figure>
+        <svg viewBox="0 0 300 240" aria-label="Unbehandelter Beton mit offenen Poren">
+          <defs><pattern id="grain" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#C9C9C4"/><circle cx="2" cy="3" r="1" fill="#B3B3AD"/><circle cx="7" cy="7" r="1.2" fill="#D8D8D3"/><circle cx="8" cy="2" r=".7" fill="#A9A9A3"/></pattern></defs>
+          <rect width="300" height="240" fill="url(#grain)"/>
+          <g fill="#fff">
+            <path d="M40 40c14-6 30 2 28 16s-22 18-32 10-10-20 4-26z"/>
+            <path d="M200 30c12-4 26 4 24 16s-18 14-26 8-8-20 2-24z"/>
+            <path d="M60 150c16-4 28 8 22 20s-26 12-32 2 0-20 10-22z"/>
+            <path d="M225 150c18-2 30 12 24 26s-28 12-34 0 0-24 10-26z"/>
+            <path d="M120 100c10-2 18 6 14 14s-18 8-20 0 0-12 6-14z"/>
+            <path d="M150 0c-4 30 10 50 0 80s-24 40-10 70 20 50 6 90h8c12-40 0-60-6-90s10-40 16-70-4-50 0-80z"/>
+          </g>
+        </svg>
+        <figcaption>Unbehandelt<span>offene Poren und Kapillaren</span></figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 300 240" aria-label="Mit Ashford Formula verdichteter Beton">
+          <rect width="300" height="240" fill="url(#grain)"/>
+          <g fill="#E3121B" opacity=".85">
+            <path d="M40 40c14-6 30 2 28 16s-22 18-32 10-10-20 4-26z"/>
+            <path d="M200 30c12-4 26 4 24 16s-18 14-26 8-8-20 2-24z"/>
+            <path d="M60 150c16-4 28 8 22 20s-26 12-32 2 0-20 10-22z"/>
+            <path d="M225 150c18-2 30 12 24 26s-28 12-34 0 0-24 10-26z"/>
+            <path d="M120 100c10-2 18 6 14 14s-18 8-20 0 0-12 6-14z"/>
+            <path d="M150 0c-4 30 10 50 0 80s-24 40-10 70 20 50 6 90h8c12-40 0-60-6-90s10-40 16-70-4-50 0-80z"/>
+          </g>
+        </svg>
+        <figcaption>Mit Ashford Formula<span>Poren gefüllt, Oberfläche verdichtet</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Einsatzbereiche -->
+<section class="section section--grey" id="bereiche">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Einsatzbereiche</span>
+      <h2 class="h2">Überall dort, wo Beton viel aushalten muss</h2>
+      <p class="lead">Vom Fitnessstudio bis zur Tiefgarage: Ashford Formula eignet sich für nahezu jeden Betonboden, auf dem täglich gefahren, gelaufen und gearbeitet wird. Hier eine Auswahl.</p>
+    </div>
+    <div class="areas">
+      <div class="area reveal"><img src="assets/bereich-industrie.jpg" alt="Werkstatthalle mit Hebebühnen auf poliertem Betonboden" loading="lazy"><div class="area__txt"><h3>Industrie &amp; Werkstatt</h3><p>Robust unter Maschinen, Hebebühnen und schwerem Gerät.</p></div></div>
+      <div class="area reveal reveal-d1"><img src="assets/bereich-logistik.jpg" alt="Lagerhalle mit Regalen und glänzendem Betonboden" loading="lazy"><div class="area__txt"><h3>Logistik &amp; Lager</h3><p>Große Flächen, viel Verkehr, kein Staub auf der Ware.</p></div></div>
+      <div class="area reveal reveal-d2"><img src="assets/projekt-1.jpg" alt="Parkdeck während der Bodenbehandlung" loading="lazy"><div class="area__txt"><h3>Tiefgaragen &amp; Parkdecks</h3><p>Hält Reifenabrieb, Streusalz und täglichem Verkehr stand.</p></div></div>
+      <div class="area reveal reveal-d3"><img src="assets/bereich-oeffentlich.jpg" alt="Heller Eingangsbereich eines öffentlichen Gebäudes" loading="lazy"><div class="area__txt"><h3>Handel &amp; öffentliche Gebäude</h3><p>Pflegeleicht und ansprechend für stark begangene Flächen.</p></div></div>
+    </div>
+
+    <div class="more reveal">
+      <p class="more__title">Weitere Einsatzbereiche</p>
+      <ul class="chips"><li>Produktionshallen</li><li>Logistikzentren</li><li>Kühlhäuser</li><li>Lebensmittelproduktion</li><li>Pharma &amp; Labore</li><li>Supermärkte</li><li>Einzelhandel</li><li>Autohäuser</li><li>Kfz-Werkstätten</li><li>Flugzeughangars</li><li>Rechenzentren</li><li>Fitnessstudios</li><li>Sporthallen</li><li>Schulen</li><li>Büros</li><li>Gastronomie</li><li>Showrooms</li><li>Museen</li><li>Landwirtschaft</li><li>Wohnräume</li><li class="chips__etc">und viele mehr</li></ul>
+      <div class="more__book">
+        <div><b>Projektbuch von Curecrete</b><span>Projektfotos und Fallbeispiele aus aller Welt, vom Fitnessstudio bis zur Tiefgarage. Auf Englisch.</span></div>
+        <a href="https://online.pubhtml5.com/zuil/pmja/" target="_blank" rel="noopener" class="btn btn--red">Projektbuch ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+    </div>
+</section>
+
+<!-- Produkte -->
+<section class="section" id="produkte">
+  <div class="wrap">
+    <div class="products-head reveal">
+      <div>
+        <span class="eyebrow">Produkte</span>
+        <h2 class="h2">Ein System für den ganzen Boden</h2>
+        <p class="lead">Vom Verdichten über den Schutz bis zur Pflege: Alle Produkte stammen von Curecrete und sind aufeinander abgestimmt.</p>
+      </div>
+      <a href="downloads/" class="btn btn--dark">Alle Datenblätter</a>
+    </div>
+    <div class="products">
+      <article id="p-ashford" class="product reveal">
+        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto Ashford Formula: Fass oder Kanister, freigestellt oder auf der Baustelle.</span></div><span class="product__cat product__cat--v">Verdichten</span></div>
+        <div class="product__body">
+          <h3>Ashford Formula</h3>
+          <p>Der Klassiker für neue Betonflächen. Wird direkt nach dem Glätten aufgebracht und macht die Oberfläche dauerhaft hart, dicht und staubfrei.</p>
+          <div class="product__links"><a href="produkte/ashford-formula/">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="downloads/">Datenblatt</a></div>
+        </div>
+      </article>
+      <article id="p-retroplate" class="product reveal reveal-d1">
+        <div class="product__img"><img src="assets/produkt-retroplate.jpg" alt="Polierter Betonboden in einem Wohnraum" loading="lazy"><span class="product__cat product__cat--v">Verdichten &amp; Polieren</span></div>
+        <div class="product__body">
+          <h3>RetroPlate</h3>
+          <p>Das System für geschliffene und polierte Betonböden. Funktioniert auf neuem Beton genauso wie auf älteren Flächen, die wieder gut aussehen sollen.</p>
+          <div class="product__links"><a href="produkte/retroplate/">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="downloads/">Datenblatt</a></div>
+        </div>
+      </article>
+      <article id="p-retroguard" class="product reveal reveal-d2">
+        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto RetroGuard oder ein polierter Boden, auf dem Öl oder Flüssigkeit nicht einzieht.</span></div><span class="product__cat">Imprägnieren</span></div>
+        <div class="product__body">
+          <h3>RetroGuard</h3>
+          <p>Schützt verdichtete und polierte Böden vor Flecken durch Öl, Fett und viele andere Flüssigkeiten, ohne die Optik zu verändern.</p>
+          <div class="product__links"><a href="produkte/retroguard/">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="downloads/">Datenblatt</a></div>
+        </div>
+      </article>
+      <article id="p-retropel" class="product reveal">
+        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto RetroPel oder Nahaufnahme von Wassertropfen, die auf Beton abperlen.</span></div><span class="product__cat">Imprägnieren</span></div>
+        <div class="product__body">
+          <h3>RetroPel</h3>
+          <p>Macht Betonflächen wasser- und schmutzabweisend. Verschüttetes perlt ab und lässt sich einfach aufnehmen, bevor es einzieht.</p>
+          <div class="product__links"><a href="produkte/retropel/">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="downloads/">Datenblatt</a></div>
+        </div>
+      </article>
+      <article id="p-creteclean" class="product reveal reveal-d1">
+        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto CreteClean (Kanister) oder Reinigung mit einer Scheuersaugmaschine.</span></div><span class="product__cat">Reinigen</span></div>
+        <div class="product__body">
+          <h3>CreteClean</h3>
+          <p>Ein Reiniger, der auf Beton abgestimmt ist. Er hält verdichtete und polierte Böden sauber und greift die Oberfläche dabei nicht an.</p>
+          <div class="product__links"><a href="produkte/creteclean/">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="downloads/">Datenblatt</a></div>
+        </div>
+      </article>
+      <article id="p-cretefill" class="product reveal reveal-d2">
+        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto CreteFill oder Nahaufnahme einer verfüllten Fuge im Hallenboden.</span></div><span class="product__cat">Reparieren</span></div>
+        <div class="product__body">
+          <h3>CreteFill</h3>
+          <p>Füllt Fugen, Risse und kleine Ausbrüche. So bleiben die Kanten stabil und werden durch Fahrverkehr nicht weiter beschädigt.</p>
+          <div class="product__links"><a href="produkte/cretefill/">Mehr erfahren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="soon">Datenblatt folgt</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Anwendung -->
+<section class="section section--grey" id="anwendung">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Anwendung</span>
+      <h2 class="h2">In vier Schritten zum fertigen Boden</h2>
+      <p class="lead">Ashford Formula wird auf frischen Beton aufgebracht, zwischen Glätten und Fugenschnitt. Die Behandlung läuft also im normalen Bauablauf mit und kostet keine zusätzliche Zeit.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step__img reveal"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Aufsprühen von Ashford Formula auf den frisch geglätteten Beton. Person mit Sprühlanze, Querformat.</span></div><span class="step__no">1</span></div>
+        <div class="reveal reveal-d1"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen.</p><span class="step__meta">Richtwert: rund 200 g pro m²</span></div>
+      </div>
+      <div class="step">
+        <div class="step__img reveal"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Verteilen des Materials mit einem breiten, weichen Besen auf der nassen Fläche.</span></div><span class="step__no">2</span></div>
+        <div class="reveal reveal-d1"><h3>Verteilen</h3><p>Mit breiten, weichen Besen wird das Material über die ganze Fläche verteilt, damit jede Stelle genug davon aufnimmt. Jetzt beginnt die Reaktion im Beton.</p></div>
+      </div>
+      <div class="step">
+        <div class="step__img reveal"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Absaugen des Schlamms aus den frisch geschnittenen Fugen mit einem Nasssauger.</span></div><span class="step__no">3</span></div>
+        <div class="reveal reveal-d1"><h3>Fugen säubern</h3><p>Nach dem Fugenschnitt wird der verbliebene Schlamm aus den Schnittfugen abgesaugt. So bleiben die Fugen sauber für die spätere Verfüllung.</p></div>
+      </div>
+      <div class="step">
+        <div class="step__img reveal"><img src="assets/schritt-4-reinigen.jpg" alt="Fertige Hallenfläche mit Scheuersaugmaschine im Hintergrund" loading="lazy"><span class="step__no">4</span></div>
+        <div class="reveal reveal-d1"><h3>Maschinell reinigen</h3><p>Zum Abschluss wird die gesamte Fläche maschinell gereinigt. Danach ist der Boden fertig und kann übergeben werden.</p></div>
+      </div>
+    </div>
+
+    <div class="video reveal" id="video" role="button" tabindex="0" aria-label="Anwendungsvideo auf YouTube abspielen" data-yt="qfEuiGrz6tM">
+      <div class="video__bg"></div>
+      <span class="video__play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+      <div class="video__label">Anwendung im Video<span>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</span></div>
+    </div>
+  <div class="center" style="margin-top:44px"><a href="anwendung/" class="btn btn--dark">Mehr zur Anwendung <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<!-- Ablauf -->
+<section class="section" id="ablauf">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Ihr Weg zum Ashford-Boden</span>
+      <h2 class="h2">So läuft die Zusammenarbeit</h2>
+      <p class="lead">Ashford Formula gibt es nicht im freien Handel. Damit das Ergebnis stimmt, setzt ein geschulter und zertifizierter Fachbetrieb jedes Projekt um.</p>
+    </div>
+    <div class="flow">
+      <div class="flow__item reveal"><h3>Anfrage stellen</h3><p>Sie schildern uns kurz Ihr Objekt, die Fläche und den geplanten Zeitraum.</p></div>
+      <div class="flow__item reveal reveal-d1"><h3>Beratung &amp; Angebot</h3><p>Wir klären die Details und stimmen den passenden Termin im Bauablauf ab.</p></div>
+      <div class="flow__item reveal reveal-d2"><h3>Ausführung</h3><p>Ein zertifizierter Fachbetrieb bringt Ashford Formula fachgerecht auf.</p></div>
+      <div class="flow__item reveal reveal-d3"><h3>Garantie</h3><p>Auf Wunsch erhalten Sie eine Garantieerklärung über 20 Jahre.</p></div>
+    </div>
+    <div class="note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+      <p><strong>Warum nur zertifizierte Fachbetriebe?</strong> Der richtige Zeitpunkt, die Menge und das saubere Verteilen entscheiden über das Ergebnis. Nur wenn diese Punkte stimmen, kann der Hersteller für den Boden garantieren.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projekte -->
+<section class="section section--grey" id="projekte" style="padding-bottom:170px">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow">Projekte</span>
+      <h2 class="h2">Böden, die für sich sprechen</h2>
+      <p class="lead">Eine Auswahl von Flächen, die mit Produkten von Curecrete behandelt wurden.</p>
+    </div>
+    <div class="gallery reveal">
+      <a href="assets/projekt-1.jpg" class="g-wide"><img src="assets/projekt-1.jpg" alt="Parkdeck während der Bodenbehandlung" loading="lazy"></a>
+      <a href="assets/projekt-2.jpg"><img src="assets/projekt-2.jpg" alt="Helle Halle mit großer Fensterfront" loading="lazy"></a>
+      <a href="assets/projekt-3.jpg" class="g-tall"><img src="assets/projekt-3.jpg" alt="Drei Oldtimer auf poliertem Betonboden" loading="lazy"></a>
+      <a href="assets/projekt-4.jpg"><img src="assets/projekt-4.jpg" alt="Glänzender Hallenboden vor einer Glasfassade" loading="lazy"></a>
+      <a href="assets/projekt-5.jpg"><img src="assets/projekt-5.jpg" alt="Oldtimer-Garage mit spiegelndem Boden" loading="lazy"></a>
+      <a href="assets/projekt-6.jpg"><img src="assets/projekt-6.jpg" alt="Halle mit Rolltoren und spiegelndem Betonboden" loading="lazy"></a>
+      <a href="assets/projekt-7.jpg" class="g-wide"><img src="assets/projekt-7.jpg" alt="Geländewagen in einer Garage mit poliertem Boden" loading="lazy"></a>
+      <a href="assets/projekt-8.jpg" class="g-wide"><img src="assets/projekt-8.jpg" alt="Sportwagen im Autolift vor glänzendem Betonboden" loading="lazy"></a>
+    </div>
+    <div class="center" style="margin-top:44px"><a href="projekte/" class="btn btn--dark">Alle Projekte ansehen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<!-- Nachhaltig -->
+<section class="section" style="padding-top:0;padding-bottom:0;margin-top:-1px">
+  <div class="wrap green-wrap">
+    <div class="green reveal">
+      <div class="green__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l8-8"/></svg></div>
+      <div><h3>Wasserbasiert und frei von Lösemitteln</h3><p>Ashford Formula enthält keine flüchtigen organischen Stoffe und setzt bei der Verarbeitung keine schädlichen Dämpfe frei. Weil der Boden so lange hält, fallen auch später weniger Material und Abfall an.</p></div>
+      <a href="#kontakt" class="btn btn--dark">Beratung anfragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- Downloads -->
+<section class="section" id="downloads" style="padding-top:20px">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Downloads</span>
+      <h2 class="h2">Datenblätter &amp; Unterlagen</h2>
+      <p class="lead">Alle technischen Angaben zu den Produkten finden Sie in den Datenblättern.</p>
+    </div>
+    <div class="downloads">
+      <a href="downloads/" class="dl reveal"><span class="dl__icon"><span>PDF</span></span><div><b>Ashford Formula</b><small>Produkt- und technisches Datenblatt</small></div></a>
+      <a href="downloads/" class="dl reveal reveal-d1"><span class="dl__icon"><span>PDF</span></span><div><b>RetroPlate</b><small>Produkt- und technisches Datenblatt</small></div></a>
+      <a href="downloads/" class="dl reveal"><span class="dl__icon"><span>PDF</span></span><div><b>RetroGuard</b><small>Produkt- und technisches Datenblatt</small></div></a>
+      <a href="downloads/" class="dl reveal reveal-d1"><span class="dl__icon"><span>PDF</span></span><div><b>RetroPel</b><small>Produkt- und technisches Datenblatt</small></div></a>
+      <a href="downloads/" class="dl reveal"><span class="dl__icon"><span>PDF</span></span><div><b>CreteClean</b><small>Produktdatenblatt und Reinigungsanleitung</small></div></a>
+      <a href="downloads/" class="dl dl--soon reveal reveal-d1"><span class="dl__icon"><span>PDF</span></span><div><b>CreteFill</b><small>Deutsche Fassung in Vorbereitung</small></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt -->
+<section class="section contact" id="kontakt">
+  <div class="contact__bg"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2 class="h2">Sie planen einen neuen Betonboden?</h2>
+      <p>Erzählen Sie uns von Ihrem Projekt. Wir melden uns schnellstmöglich, beantworten Ihre Fragen und bringen Sie mit dem passenden Fachbetrieb zusammen.</p>
+      <ul class="contact__info">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><small>E-Mail</small><a href="mailto:info@beltex.org">info@beltex.org</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Vertrieb in Deutschland</small>Beltex Commerce, Berliner Straße 21, 56470 Bad Marienberg</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><div><small>Lieber telefonieren?</small>Einfach im Formular einen Rückruf anfordern.</div></li>
+      </ul>
+    </div>
+    <form class="form reveal reveal-d1" id="form" novalidate>
+      <h3>Projekt anfragen</h3>
+      <p>Die Anfrage ist unverbindlich und kostenlos.</p>
+      <div class="form__grid">
+        <div class="field"><label for="f-name">Name *</label><input id="f-name" type="text" required></div>
+        <div class="field"><label for="f-firma">Firma</label><input id="f-firma" type="text"></div>
+        <div class="field"><label for="f-tel">Telefon</label><input id="f-tel" type="tel"></div>
+        <div class="field"><label for="f-mail">E-Mail *</label><input id="f-mail" type="email" required></div>
+        <div class="field"><label for="f-objekt">Art des Objekts</label>
+          <select id="f-objekt"><option value="">Bitte wählen</option><option>Industrie, Produktion oder Werkstatt</option><option>Logistik- oder Lagerhalle</option><option>Lebensmittel oder Pharma</option><option>Handel oder öffentliches Gebäude</option><option>Sonstiges</option></select></div>
+        <div class="field"><label for="f-flaeche">Fläche in m²</label><input id="f-flaeche" type="number" min="0" placeholder="z. B. 5.000"></div>
+        <div class="field field--full"><label for="f-zeit">Geplanter Zeitraum</label><input id="f-zeit" type="text" placeholder="z. B. Frühjahr 2027"></div>
+        <div class="field field--full"><label for="f-msg">Nachricht</label><textarea id="f-msg"></textarea></div>
+        <label class="check"><input type="checkbox"><span>Bitte rufen Sie mich zurück.</span></label>
+        <label class="check"><input type="checkbox" required><span>Ich habe die <a href="datenschutz/">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden. *</span></label>
+      </div>
+      <button type="submit" class="btn btn--red">Anfrage senden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div>
+        <img src="assets/ashford-formula-logo-weiss.png" alt="Ashford Formula">
+        <p>Der Original-Betonverdichter von Curecrete. Für Betonböden, die über Jahrzehnte hart, dicht und staubfrei bleiben.</p>
+      </div>
+      <div>
+        <h4>Produkte</h4>
+        <ul><li><a href="produkte/ashford-formula/">Ashford Formula</a></li><li><a href="produkte/retroplate/">RetroPlate</a></li><li><a href="produkte/retroguard/">RetroGuard</a></li><li><a href="produkte/retropel/">RetroPel</a></li><li><a href="produkte/creteclean/">CreteClean</a></li><li><a href="produkte/cretefill/">CreteFill</a></li></ul>
+      </div>
+      <div>
+        <h4>Informationen</h4>
+        <ul><li><a href="produkte/">Produktübersicht</a></li><li><a href="anwendung/">Anwendung</a></li><li><a href="projekte/">Projekte</a></li><li><a href="downloads/">Downloads</a></li><li><a href="kontakt/">Kontakt</a></li></ul>
+      </div>
+      <div>
+        <div class="partner">
+          <small>Vertrieb in Deutschland</small>
+          <img class="partner__img" src="assets/beltex-commerce-logo-weiss.png" alt="Beltex Commerce">
+          <p style="margin-top:16px">Berliner Straße 21<br>56470 Bad Marienberg<br><a href="mailto:info@beltex.org">info@beltex.org</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Ashford Formula Deutschland · Beltex Commerce</span>
+      <nav><a href="impressum/">Impressum</a><a href="datenschutz/">Datenschutz</a><a href="#" id="cookie-settings">Cookie-Einstellungen</a></nav>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox"><button aria-label="Schließen">×</button><img alt=""></div>
+<div class="toast" id="toast">Prototyp: Das Formular wird bei der Umsetzung in WordPress angebunden.</div>
+
+<script>
+// Header Schatten
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('is-scrolled',scrollY>10),{passive:true});
+
+// Mobiles Menü
+const burger=document.getElementById('burger'),nav=document.getElementById('nav');
+burger.addEventListener('click',()=>{nav.classList.toggle('is-open');burger.classList.toggle('is-open')});
+nav.querySelectorAll('a:not(.dd__toggle)').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');burger.classList.remove('is-open')}));
+
+
+// Dropdown mobil aufklappen
+document.querySelector('.dd__toggle').addEventListener('click',e=>{if(innerWidth<=1080){e.preventDefault();e.currentTarget.parentElement.classList.toggle('is-open')}});
+// Einblenden beim Scrollen
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Zähler
+const fmt=n=>n.toLocaleString('de-DE');
+const co=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,end=+el.dataset.count,plain='plain' in el.dataset,start=plain?end-75:0,t0=performance.now(),d=1600;
+  const tick=t=>{const p=Math.min((t-t0)/d,1),v=Math.round(start+(end-start)*(1-Math.pow(1-p,3)));el.textContent=plain?v:fmt(v);if(p<1)requestAnimationFrame(tick)};
+  requestAnimationFrame(tick);co.unobserve(el);
+}),{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+// Lightbox
+const lb=document.getElementById('lightbox'),lbImg=lb.querySelector('img');
+document.querySelectorAll('.gallery a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lbImg.src=a.href;lb.classList.add('is-open')}));
+lb.addEventListener('click',()=>lb.classList.remove('is-open'));
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('is-open')});
+
+// Hinweise im Prototyp
+const toast=document.getElementById('toast');
+const show=msg=>{toast.textContent=msg;toast.classList.add('is-on');clearTimeout(show.t);show.t=setTimeout(()=>toast.classList.remove('is-on'),3200)};
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();show('Prototyp: Das Formular wird bei der Umsetzung in WordPress angebunden.')});
+const vid=document.getElementById('video');
+const loadVid=()=>{if(vid.querySelector('iframe'))return;const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+vid.dataset.yt+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.title='Anwendungsvideo Ashford Formula';vid.appendChild(f);vid.style.cursor='default'};
+vid.addEventListener('click',loadVid);vid.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();loadVid()}});
+</script>
+</body>
+</html>
