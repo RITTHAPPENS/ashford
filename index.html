@@ -142,6 +142,23 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
 .pores figcaption{font-family:var(--head);font-weight:700;font-size:15px;margin-top:14px}
 .pores figcaption span{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:14px;margin-top:2px}
 
+
+/* Vergleichsgrafik */
+.compare-img{margin:56px 0 0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.compare-img img{width:100%;height:auto;max-width:700px;margin:0 auto}
+.compare-img figcaption{text-align:center;color:var(--muted);font-size:14px;margin-top:14px}
+.how{align-items:end}
+.how__side .how__list{margin-top:0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+.compare__card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px 20px}
+.compare__card--af{border-top:4px solid var(--red)}
+.compare__head{font-family:var(--head);font-weight:800;font-size:20px;margin-bottom:16px}
+.compare__card--af .compare__head{color:var(--red)}
+.compare__card svg{display:block;width:100%;height:auto}
+.compare__zoom{display:flex;align-items:center;gap:16px;margin-top:14px;padding-top:16px;border-top:1px solid var(--line)}
+.compare__lens{width:110px;height:110px;flex:0 0 110px}
+.compare__zoom span{font-size:14px;color:var(--muted)}
+
 /* Einsatzbereiche */
 .areas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
 .area{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:3/4;color:#fff;display:flex;align-items:flex-end}
@@ -201,8 +218,8 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
 .video img{width:100%;height:100%;object-fit:cover;opacity:.7;transition:opacity .3s,transform .6s}
 .video:hover img{opacity:.55;transform:scale(1.03)}
 .video__bg{position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,#3a3a37 0,#1C1C1A 70%)}
-.video__bg::after{content:"";position:absolute;inset:0;background:url(assets/hero-halle.jpg) center/cover;opacity:.28;transition:opacity .4s,transform .6s}
-.video:hover .video__bg::after{opacity:.2;transform:scale(1.03)}
+.video__bg::after{content:"";position:absolute;inset:0;background:url(assets/video-poster.jpg) center/cover;opacity:.55;transition:opacity .4s,transform .6s}
+.video:hover .video__bg::after{opacity:.45;transform:scale(1.03)}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:5}
 .video__play{position:absolute;left:50%;top:50%;z-index:2;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(227,18,27,.6);animation:pulse 2.2s infinite}
 .video__play svg{width:34px;height:34px;fill:#fff;margin-left:6px}
@@ -222,6 +239,20 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
 .note{margin-top:56px;display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);padding:24px 28px;border-radius:var(--radius)}
 .note svg{flex:0 0 28px;width:28px;height:28px;color:var(--red)}
 .note p{color:var(--ink-soft)}
+
+
+/* Partner Stratec */
+.partner-block{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center;margin-top:56px;background:var(--grey);border-radius:var(--radius);padding:48px}
+.partner-block__logo{height:44px;width:auto;margin:6px 0 22px}
+.partner-block h3{font-size:28px;margin-bottom:14px}
+.partner-block p{color:var(--ink-soft);margin-bottom:22px}
+.partner-block__thumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
+.partner-block__thumbs a{display:block;overflow:hidden;border-radius:var(--radius);aspect-ratio:4/3}
+.partner-block__thumbs img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.partner-block__thumbs a:hover img{transform:scale(1.06)}
+.partner-block__video{position:relative;margin:0;justify-self:center;width:100%;max-width:320px}
+.partner-block__video video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#000;box-shadow:0 24px 50px rgba(0,0,0,.18)}
+.partner-block__video figcaption{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.6);color:#fff;font-size:13px;font-weight:600;padding:6px 10px;border-radius:3px}
 
 /* Projekte */
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:14px;margin-top:56px}
@@ -341,10 +372,12 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
   .burger.is-open span:nth-child(2){opacity:0}
   .burger.is-open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
   .intro,.how,.contact .wrap{grid-template-columns:1fr;gap:50px}
+  .how{gap:24px}
   .areas{grid-template-columns:repeat(2,1fr)}
   .products{grid-template-columns:repeat(2,1fr)}
   .footer__top{grid-template-columns:1fr 1fr}
   .flow{grid-template-columns:1fr 1fr;row-gap:44px}
+  .partner-block{grid-template-columns:1fr;gap:40px;padding:36px}
   .flow__item:nth-child(2)::after{display:none}
 }
 @media (max-width:760px){
@@ -368,7 +401,9 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
   .benefit{padding:34px 26px}
   .intro__tag{right:10px;bottom:-24px}
   .intro__img::before{display:none}
-  .pores{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr;margin-top:40px}
+  .compare-img{padding:14px;margin-top:40px}
+  .compare__card{padding:20px 16px 16px}
   .step,.step:nth-child(even){grid-template-columns:1fr;gap:40px}
   .step:nth-child(even) .step__img{order:0}
   .step__no,.step:nth-child(even) .step__no{left:14px;right:auto;top:-22px;width:60px;height:60px;font-size:24px}
@@ -384,6 +419,8 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
   .green-wrap{transform:none;margin-top:50px}
   #projekte{padding-bottom:76px!important}
   .form{padding:28px 22px}
+  .partner-block{padding:26px 20px}
+  .partner-block h3{font-size:23px}
   .more{padding:26px 22px}
   .chips li{font-size:14px;padding:7px 13px}
   .form__grid{grid-template-columns:1fr}
@@ -509,49 +546,27 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
 
 <!-- Wirkweise -->
 <section class="section" id="wirkweise">
-  <div class="wrap how">
-    <div class="reveal">
-      <span class="eyebrow">Wirkweise</span>
-      <h2 class="h2">Was im Beton passiert</h2>
-      <p>Frischer Beton ist voller winziger Hohlräume. Dort sammeln sich Wasser und Schmutz, und an der Oberfläche löst sich nach und nach feiner Staub.</p>
+  <div class="wrap">
+    <div class="how reveal">
+      <div>
+        <span class="eyebrow">Wirkweise</span>
+        <h2 class="h2">Was im Beton passiert</h2>
+        <p>Frischer Beton ist voller winziger Hohlräume. Dort sammeln sich Wasser und Schmutz, und an der Oberfläche löst sich nach und nach feiner Staub.</p>
       <p>Ashford Formula reagiert mit dem Calciumhydroxid im Beton und bildet feste Kristalle genau an diesen Stellen. Die oberste Schicht wird dadurch dicht und hart.</p>
-      <ul class="how__list">
+      </div>
+      <div class="how__side">
+        <ul class="how__list">
         <li>Der Beton bleibt diffusionsoffen, Feuchtigkeit kann weiterhin entweichen.</li>
         <li>Es entsteht keine Schicht, die sich ablösen oder abplatzen kann.</li>
         <li>Mit der täglichen Nutzung wird die Oberfläche dichter und bekommt einen leichten Glanz.</li>
       </ul>
+      </div>
     </div>
-    <div class="pores reveal reveal-d1">
-      <figure>
-        <svg viewBox="0 0 300 240" aria-label="Unbehandelter Beton mit offenen Poren">
-          <defs><pattern id="grain" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#C9C9C4"/><circle cx="2" cy="3" r="1" fill="#B3B3AD"/><circle cx="7" cy="7" r="1.2" fill="#D8D8D3"/><circle cx="8" cy="2" r=".7" fill="#A9A9A3"/></pattern></defs>
-          <rect width="300" height="240" fill="url(#grain)"/>
-          <g fill="#fff">
-            <path d="M40 40c14-6 30 2 28 16s-22 18-32 10-10-20 4-26z"/>
-            <path d="M200 30c12-4 26 4 24 16s-18 14-26 8-8-20 2-24z"/>
-            <path d="M60 150c16-4 28 8 22 20s-26 12-32 2 0-20 10-22z"/>
-            <path d="M225 150c18-2 30 12 24 26s-28 12-34 0 0-24 10-26z"/>
-            <path d="M120 100c10-2 18 6 14 14s-18 8-20 0 0-12 6-14z"/>
-            <path d="M150 0c-4 30 10 50 0 80s-24 40-10 70 20 50 6 90h8c12-40 0-60-6-90s10-40 16-70-4-50 0-80z"/>
-          </g>
-        </svg>
-        <figcaption>Unbehandelt<span>offene Poren und Kapillaren</span></figcaption>
-      </figure>
-      <figure>
-        <svg viewBox="0 0 300 240" aria-label="Mit Ashford Formula verdichteter Beton">
-          <rect width="300" height="240" fill="url(#grain)"/>
-          <g fill="#E3121B" opacity=".85">
-            <path d="M40 40c14-6 30 2 28 16s-22 18-32 10-10-20 4-26z"/>
-            <path d="M200 30c12-4 26 4 24 16s-18 14-26 8-8-20 2-24z"/>
-            <path d="M60 150c16-4 28 8 22 20s-26 12-32 2 0-20 10-22z"/>
-            <path d="M225 150c18-2 30 12 24 26s-28 12-34 0 0-24 10-26z"/>
-            <path d="M120 100c10-2 18 6 14 14s-18 8-20 0 0-12 6-14z"/>
-            <path d="M150 0c-4 30 10 50 0 80s-24 40-10 70 20 50 6 90h8c12-40 0-60-6-90s10-40 16-70-4-50 0-80z"/>
-          </g>
-        </svg>
-        <figcaption>Mit Ashford Formula<span>Poren gefüllt, Oberfläche verdichtet</span></figcaption>
-      </figure>
-    </div>
+    <figure class="compare-img reveal">
+      <!-- Platzhalter: polnische Originalgrafik, wird durch die deutsche Fassung ersetzt -->
+      <img src="assets/wirkweise-grafik.png" alt="Vergleich: herkömmliche Imprägnierung bleibt als Film auf der Oberfläche, Ashford Formula dringt ein und bildet Kristalle" loading="lazy">
+      <figcaption>Links: herkömmliche Imprägnierung. Rechts: Ashford Formula.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -594,7 +609,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
     </div>
     <div class="products">
       <article id="p-ashford" class="product reveal">
-        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto Ashford Formula: Fass oder Kanister, freigestellt oder auf der Baustelle.</span></div><span class="product__cat product__cat--v">Verdichten</span></div>
+        <div class="product__img"><img src="assets/produkt-ashford.jpg" alt="Fass Ashford Formula auf der Baustelle" loading="lazy" style="object-position:right center"><span class="product__cat product__cat--v">Verdichten</span></div>
         <div class="product__body">
           <h3>Ashford Formula</h3>
           <p>Der Klassiker für neue Betonflächen. Wird direkt nach dem Glätten aufgebracht und macht die Oberfläche dauerhaft hart, dicht und staubfrei.</p>
@@ -626,7 +641,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         </div>
       </article>
       <article id="p-creteclean" class="product reveal reveal-d1">
-        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto CreteClean (Kanister) oder Reinigung mit einer Scheuersaugmaschine.</span></div><span class="product__cat">Reinigen</span></div>
+        <div class="product__img"><img src="assets/produkt-creteclean.jpg" alt="Reinigung eines behandelten Betonbodens mit Scheuersaugmaschine" loading="lazy"><span class="product__cat">Reinigen</span></div>
         <div class="product__body">
           <h3>CreteClean</h3>
           <p>Ein Reiniger, der auf Beton abgestimmt ist. Er hält verdichtete und polierte Böden sauber und greift die Oberfläche dabei nicht an.</p>
@@ -655,19 +670,19 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
     </div>
     <div class="steps">
       <div class="step">
-        <div class="step__img reveal"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Aufsprühen von Ashford Formula auf den frisch geglätteten Beton. Person mit Sprühlanze, Querformat.</span></div><span class="step__no">1</span></div>
+        <div class="step__img reveal"><img src="assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird auf die Betonfläche gesprüht" loading="lazy"><span class="step__no">1</span></div>
         <div class="reveal reveal-d1"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen.</p><span class="step__meta">Richtwert: rund 200 g pro m²</span></div>
       </div>
       <div class="step">
-        <div class="step__img reveal"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Verteilen des Materials mit einem breiten, weichen Besen auf der nassen Fläche.</span></div><span class="step__no">2</span></div>
+        <div class="step__img reveal"><img src="assets/schritt-2-verteilen.jpg" alt="Arbeiter verteilen Ashford Formula mit breiten Besen" loading="lazy"><span class="step__no">2</span></div>
         <div class="reveal reveal-d1"><h3>Verteilen</h3><p>Mit breiten, weichen Besen wird das Material über die ganze Fläche verteilt, damit jede Stelle genug davon aufnimmt. Jetzt beginnt die Reaktion im Beton.</p></div>
       </div>
       <div class="step">
-        <div class="step__img reveal"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Absaugen des Schlamms aus den frisch geschnittenen Fugen mit einem Nasssauger.</span></div><span class="step__no">3</span></div>
-        <div class="reveal reveal-d1"><h3>Fugen säubern</h3><p>Nach dem Fugenschnitt wird der verbliebene Schlamm aus den Schnittfugen abgesaugt. So bleiben die Fugen sauber für die spätere Verfüllung.</p></div>
+        <div class="step__img reveal"><img src="assets/schritt-3-fugen.jpg" alt="Fugenschneider mit angeschlossener Absaugung auf einem Betonboden" loading="lazy"><span class="step__no">3</span></div>
+        <div class="reveal reveal-d1"><h3>Fugen schneiden und säubern</h3><p>Beim Fugenschnitt wird der entstehende Schlamm direkt abgesaugt. So bleiben die Fugen sauber und lassen sich später gut verfüllen.</p></div>
       </div>
       <div class="step">
-        <div class="step__img reveal"><img src="assets/schritt-4-reinigen.jpg" alt="Fertige Hallenfläche mit Scheuersaugmaschine im Hintergrund" loading="lazy"><span class="step__no">4</span></div>
+        <div class="step__img reveal"><img src="assets/schritt-4-reinigen.jpg" alt="Reinigung der behandelten Fläche mit einer Aufsitz-Scheuersaugmaschine" loading="lazy"><span class="step__no">4</span></div>
         <div class="reveal reveal-d1"><h3>Maschinell reinigen</h3><p>Zum Abschluss wird die gesamte Fläche maschinell gereinigt. Danach ist der Boden fertig und kann übergeben werden.</p></div>
       </div>
     </div>
@@ -692,12 +707,29 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
     <div class="flow">
       <div class="flow__item reveal"><h3>Anfrage stellen</h3><p>Sie schildern uns kurz Ihr Objekt, die Fläche und den geplanten Zeitraum.</p></div>
       <div class="flow__item reveal reveal-d1"><h3>Beratung &amp; Angebot</h3><p>Wir klären die Details und stimmen den passenden Termin im Bauablauf ab.</p></div>
-      <div class="flow__item reveal reveal-d2"><h3>Ausführung</h3><p>Ein zertifizierter Fachbetrieb bringt Ashford Formula fachgerecht auf.</p></div>
+      <div class="flow__item reveal reveal-d2"><h3>Ausführung</h3><p>Unser zertifizierter Partner Stratec Industrieboden bringt Ashford Formula fachgerecht auf.</p></div>
       <div class="flow__item reveal reveal-d3"><h3>Garantie</h3><p>Auf Wunsch erhalten Sie eine Garantieerklärung über 20 Jahre.</p></div>
     </div>
     <div class="note reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
       <p><strong>Warum nur zertifizierte Fachbetriebe?</strong> Der richtige Zeitpunkt, die Menge und das saubere Verteilen entscheiden über das Ergebnis. Nur wenn diese Punkte stimmen, kann der Hersteller für den Boden garantieren.</p>
+    </div>
+    <div class="partner-block reveal" id="stratec">
+      <div class="partner-block__txt">
+        <span class="eyebrow">Zertifizierter Partner</span>
+        <img src="assets/stratec-logo.png" alt="Stratec Industrieboden GmbH" class="partner-block__logo">
+        <h3>Ausführung durch Stratec Industrieboden</h3>
+        <p>In Deutschland übernimmt die Stratec Industrieboden GmbH als zertifizierter Fachbetrieb die Anwendung von Ashford Formula. Das Team ist vom Hersteller geschult und sorgt dafür, dass Zeitpunkt, Menge und Verarbeitung genau stimmen. Nur so ist die Garantie über 20 Jahre möglich.</p>
+        <div class="partner-block__thumbs">
+          <a href="assets/stratec-1.jpg" class="js-lightbox"><img src="assets/stratec-1.jpg" alt="Team beim Verteilen und Reinigen auf einer Baustelle" loading="lazy"></a>
+          <a href="assets/stratec-2.jpg" class="js-lightbox"><img src="assets/stratec-2.jpg" alt="Abziehen der Fläche zwischen Betonstützen" loading="lazy"></a>
+        </div>
+        <a href="https://www.stratec-industrieboden.de/" target="_blank" rel="noopener" class="btn btn--dark">Zu Stratec Industrieboden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+      <figure class="partner-block__video">
+        <video src="assets/video/anwendung-baustelle.mp4" poster="assets/video/anwendung-baustelle-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Video: Anwendung von Ashford Formula auf einer Baustelle"></video>
+        <figcaption>Ashford Formula im Einsatz</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -812,6 +844,8 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
           <small>Vertrieb in Deutschland</small>
           <img class="partner__img" src="assets/beltex-commerce-logo-weiss.png" alt="Beltex Commerce">
           <p style="margin-top:16px">Berliner Straße 21<br>56470 Bad Marienberg<br><a href="mailto:info@beltex.org">info@beltex.org</a></p>
+          <small style="margin-top:20px">Zertifizierter Verarbeiter</small>
+          <a href="https://www.stratec-industrieboden.de/" target="_blank" rel="noopener" style="color:#fff;font-weight:600">Stratec Industrieboden GmbH</a>
         </div>
       </div>
     </div>
@@ -854,7 +888,7 @@ document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 
 // Lightbox
 const lb=document.getElementById('lightbox'),lbImg=lb.querySelector('img');
-document.querySelectorAll('.gallery a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lbImg.src=a.href;lb.classList.add('is-open')}));
+document.querySelectorAll('.gallery a,.js-lightbox').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();lbImg.src=a.href;lb.classList.add('is-open')}));
 lb.addEventListener('click',()=>lb.classList.remove('is-open'));
 addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('is-open')});
 
