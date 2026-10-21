@@ -89,11 +89,11 @@ def footer(p):
         <p>Der Original-Betonverdichter von Curecrete. Für Betonböden, die über Jahrzehnte hart, dicht und staubfrei bleiben.</p>
       </div>
       <div>
-        <h4>Produkte</h4>
+        <h2 class="fh">Produkte</h2>
         <ul>{plist}</ul>
       </div>
       <div>
-        <h4>Informationen</h4>
+        <h2 class="fh">Informationen</h2>
         <ul><li><a href="{p}produkte/">Produktübersicht</a></li><li><a href="{p}anwendung/">Anwendung</a></li><li><a href="{p}projekte/">Projekte</a></li><li><a href="{p}downloads/">Downloads</a></li><li><a href="{p}kontakt/">Kontakt</a></li></ul>
       </div>
       <div class="footer__partner">
@@ -151,7 +151,7 @@ def home():
     <p>Ashford Formula zieht in die Betonoberfläche ein und macht sie dauerhaft abriebfest und staubbindend. Eine Behandlung, die über Jahrzehnte wirkt.</p>
     <div class="hero__cta">
       <a href="#kontakt" class="btn btn--red">Projekt anfragen {ic('arrow-right')}</a>
-      <a href="#wirkweise" class="btn btn--light">So wirkt es</a>
+      <a href="anwendung/" class="btn btn--light">So wirkt es</a>
     </div>
   </div>
 </section>
@@ -201,26 +201,6 @@ def home():
   </div>
 </section>
 
-<section class="sec" id="wirkweise">
-  <div class="wrap how">
-    <div class="reveal">
-      <h2 class="h2">Was im Beton passiert</h2>
-      <p>Frischer Beton ist voller winziger Hohlräume. Dort sammeln sich Wasser und Schmutz, und an der Oberfläche löst sich nach und nach feiner Staub.</p>
-      <p>Ashford Formula reagiert mit dem Calciumhydroxid im Beton und bildet feste Kristalle genau an diesen Stellen. Die oberste Schicht wird dicht und hart.</p>
-      <ul class="ticks">
-        <li>{ic('check-circle')}Der Beton bleibt diffusionsoffen.</li>
-        <li>{ic('check-circle')}Keine Schicht, die sich ablösen oder abplatzen kann.</li>
-        <li>{ic('check-circle')}Mit der Nutzung wird die Oberfläche dichter und bekommt Glanz.</li>
-      </ul>
-    </div>
-    <figure class="how__fig reveal reveal-d1">
-      <!-- Platzhalter: polnische Originalgrafik, wird durch die deutsche Fassung ersetzt -->
-      <img src="assets/wirkweise-grafik.png" alt="Vergleich: herkömmliche Imprägnierung bleibt als Film auf der Oberfläche, Ashford Formula dringt ein und bildet Kristalle" loading="lazy">
-      <figcaption><span>Links: herkömmliche Imprägnierung</span><span>Rechts: Ashford Formula</span></figcaption>
-    </figure>
-  </div>
-</section>
-
 <section class="sec sec--concrete" id="bereiche">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -262,52 +242,28 @@ def home():
 </section>
 
 <section class="sec sec--concrete" id="anwendung">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <h2 class="h2">In vier Schritten zum fertigen Boden</h2>
-      <p class="lead">Ashford Formula wird zwischen Glätten und Fugenschnitt aufgebracht. Die Behandlung läuft im normalen Bauablauf mit.</p>
-    </div>
-    <ol class="steps">
-      <li class="step reveal"><div class="step__img"><img src="assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird mit der Sprühlanze auf die Hallenfläche aufgebracht" loading="lazy"></div><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, rund 200 g pro m².</p></li>
-      <li class="step reveal reveal-d1"><div class="step__img"><img src="assets/schritt-2-verteilen.jpg" alt="Arbeiter verteilen Ashford Formula mit breiten Besen" loading="lazy"></div><h3>Verteilen</h3><p>Breite, weiche Besen verteilen das Material, damit jede Stelle genug aufnimmt.</p></li>
-      <li class="step reveal reveal-d2"><div class="step__img"><img src="assets/schritt-3-fugen.jpg" alt="Fugenschneider mit Absaugung auf einem Betonboden" loading="lazy"></div><h3>Fugen schneiden</h3><p>Der Schlamm wird beim Schnitt direkt abgesaugt, die Fugen bleiben sauber.</p></li>
-      <li class="step reveal reveal-d3"><div class="step__img"><img src="assets/schritt-4-reinigen.jpg" alt="Fertige Hallenfläche nach der maschinellen Reinigung" loading="lazy"></div><h3>Reinigen</h3><p>Zum Schluss wird die Fläche maschinell gereinigt und kann übergeben werden.</p></li>
-    </ol>
-    <div class="video reveal" id="video" role="button" tabindex="0" aria-label="Anwendungsvideo auf YouTube abspielen" data-yt="qfEuiGrz6tM">
-      <img src="assets/video-poster.jpg" alt="" loading="lazy">
-      <span class="video__play">{ic('play')}</span>
-      <div class="video__label"><b>Anwendung im Video</b><span>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</span></div>
-    </div>
-    <div class="more-row"><a href="anwendung/" class="textlink">Mehr zur Anwendung {ic('arrow-right')}</a></div>
-  </div>
-</section>
-
-<section class="sec" id="ablauf">
-  <div class="wrap coop">
-    <div class="reveal">
-      <h2 class="h2">So läuft die Zusammenarbeit</h2>
-      <p class="lead">Ashford Formula gibt es nicht im freien Handel. Damit das Ergebnis stimmt, setzt ein geschulter und zertifizierter Fachbetrieb jedes Projekt um.</p>
-      <ol class="flow">
-        <li><div><h3>Anfrage stellen</h3><p>Sie schildern kurz Objekt, Fläche und den geplanten Zeitraum.</p></div></li>
-        <li><div><h3>Beratung und Angebot</h3><p>Wir klären die Details und stimmen den Termin im Bauablauf ab.</p></div></li>
-        <li><div><h3>Ausführung</h3><p>Unser zertifizierter Partner bringt Ashford Formula fachgerecht auf.</p></div></li>
-        <li><div><h3>Garantie</h3><p>Auf Wunsch erhalten Sie eine Garantieerklärung über 20 Jahre.</p></div></li>
-      </ol>
-    </div>
-    <div class="partner reveal reveal-d1" id="stratec">
-      <img src="assets/stratec-logo.png" alt="Stratec Industrieboden GmbH" class="partner__logo">
-      <h3>Ausführung durch Stratec Industrieboden</h3>
-      <p>In Deutschland übernimmt die Stratec Industrieboden GmbH die Anwendung von Ashford Formula. Das Team ist von Curecrete geschult und zertifiziert. Zeitpunkt, Menge und Verarbeitung stimmen, und nur so ist die Garantie über 20 Jahre möglich.</p>
-      <a class="partner__cert" href="downloads/stratec-zertifikat-ashford-formula-2025.pdf" target="_blank" rel="noopener">
-        <img src="assets/stratec-zertifikat.jpg" alt="Zertifikat von Curecrete für Stratec Industrieboden" loading="lazy">
-        <div><b>Zertifizierter Verarbeiter</b><span>Ausgestellt von Curecrete, gültig bis Mai 2027</span><em>Zertifikat ansehen {ic('file-pdf')}</em></div>
-      </a>
-      <a href="https://www.stratec-industrieboden.de/" target="_blank" rel="noopener" class="textlink">Zu Stratec Industrieboden {ic('arrow-up-right')}</a>
+  <div class="wrap teaser">
+    <a class="teaser__media reveal" href="anwendung/">
+      <img src="assets/schritt-2-verteilen.jpg" alt="Arbeiter verteilen Ashford Formula mit breiten Besen auf frischem Beton" loading="lazy">
+    </a>
+    <div class="reveal reveal-d1">
+      <h2 class="h2">Aufgebracht im normalen Bauablauf</h2>
+      <p class="lead">Ashford Formula kommt zwischen Glätten und Fugenschnitt auf den frischen Beton. Es entsteht kein zusätzlicher Bauabschnitt und keine Wartezeit.</p>
+      <ul class="ticks">
+        <li>{ic('check-circle')}Aufsprühen, verteilen, Fugen schneiden, reinigen</li>
+        <li>{ic('check-circle')}Rund 200 g pro m², einmalig</li>
+        <li>{ic('check-circle')}Ausgeführt von einem zertifizierten Fachbetrieb</li>
+      </ul>
+      <div class="teaser__partner">
+        <img src="assets/stratec-logo.png" alt="Stratec Industrieboden GmbH">
+        <span>Zertifizierter Verarbeiter in Deutschland</span>
+      </div>
+      <a href="anwendung/" class="btn btn--line">Zur Anwendung {ic('arrow-right')}</a>
     </div>
   </div>
 </section>
 
-<section class="sec sec--concrete" id="projekte">
+<section class="sec" id="projekte">
   <div class="wrap">
     <div class="sec-head sec-head--row reveal">
       <div>
@@ -329,7 +285,7 @@ def home():
   </div>
 </section>
 
-<section class="sec" id="kontakt">
+<section class="sec sec--concrete" id="kontakt">
   <div class="wrap contact">
     <div class="reveal">
       <h2 class="h2">Sie planen einen neuen Betonboden?</h2>
@@ -452,7 +408,6 @@ def products_page():
 <main>
 <section class="page-head">
   <div class="wrap">
-    <nav class="crumbs" aria-label="Brotkrumen"><a href="{p}./">Startseite</a><span aria-hidden="true">/</span><span>Produkte</span></nav>
     <h1>Produkte</h1>
     <p class="lead">Sechs Produkte von Curecrete, die aufeinander abgestimmt sind. Vom frischen Beton über den Schutz bis zur täglichen Pflege.</p>
     <ol class="system" aria-label="Das System">
@@ -493,8 +448,148 @@ def products_page():
     return h
 
 
+# ======================================================================
+# Anwendung
+# ======================================================================
+def anwendung_page():
+    p = '../'
+    h = head(p, 'Anwendung | Ashford Formula Deutschland',
+             'So wird Ashford Formula aufgebracht: Wirkweise, Ablauf auf der Baustelle, Pflege nach der Übergabe und Ausführung durch den zertifizierten Fachbetrieb Stratec Industrieboden.')
+    h += header(p, 'anwendung')
+    h += f"""
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <h1>Anwendung</h1>
+    <p class="lead">Ashford Formula wird einmal auf den frischen Beton aufgebracht und wirkt danach im Material selbst. So läuft es ab, vom ersten Sprühstoß bis zur Pflege im Alltag.</p>
+    <ul class="facts">
+      <li>{ic('calendar-check')}<div><b>Zeitpunkt</b><span>Zwischen Glätten und Fugenschnitt</span></div></li>
+      <li>{ic('drop')}<div><b>Menge</b><span>Rund 200 g pro m², einmalig</span></div></li>
+      <li>{ic('clock-counter-clockwise')}<div><b>Aufwand</b><span>Läuft im normalen Bauablauf mit</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="wirkweise">
+  <div class="wrap how">
+    <div class="reveal">
+      <h2 class="h2">Was im Beton passiert</h2>
+      <p>Frischer Beton ist voller winziger Hohlräume. Dort sammeln sich Wasser und Schmutz, und an der Oberfläche löst sich nach und nach feiner Staub.</p>
+      <p>Ashford Formula reagiert mit dem Calciumhydroxid im Beton und bildet feste Kristalle genau an diesen Stellen. Die oberste Schicht wird dicht und hart.</p>
+      <ul class="ticks">
+        <li>{ic('check-circle')}Der Beton bleibt diffusionsoffen.</li>
+        <li>{ic('check-circle')}Keine Schicht, die sich ablösen oder abplatzen kann.</li>
+        <li>{ic('check-circle')}Mit der Nutzung wird die Oberfläche dichter und bekommt Glanz.</li>
+      </ul>
+    </div>
+    <figure class="how__fig reveal reveal-d1">
+      <!-- Platzhalter: polnische Originalgrafik, wird durch die deutsche Fassung ersetzt -->
+      <img src="{p}assets/wirkweise-grafik.png" alt="Vergleich: herkömmliche Imprägnierung bleibt als Film auf der Oberfläche, Ashford Formula dringt ein und bildet Kristalle" loading="lazy">
+      <figcaption><span>Links: herkömmliche Imprägnierung</span><span>Rechts: Ashford Formula</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec sec--concrete" id="ablauf-baustelle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="h2">Der Ablauf auf der Baustelle</h2>
+      <p class="lead">Vier Arbeitsschritte, die direkt an das Glätten des Betons anschließen. Entscheidend sind der richtige Zeitpunkt und eine gleichmäßige Menge.</p>
+    </div>
+    <ol class="bigsteps">
+      <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird mit der Sprühlanze auf die Hallenfläche aufgebracht" loading="lazy"></div>
+        <div class="bigstep__txt"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen, als Richtwert gelten rund 200 g pro m².</p></div></li>
+      <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-2-verteilen.jpg" alt="Arbeiter verteilen Ashford Formula mit breiten Besen" loading="lazy"></div>
+        <div class="bigstep__txt"><h3>Verteilen</h3><p>Mit breiten, weichen Besen wird das Material über die ganze Fläche verteilt, damit jede Stelle genug aufnimmt. Jetzt beginnt die Reaktion im Beton.</p></div></li>
+      <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-3-fugen.jpg" alt="Fugenschneider mit Absaugung auf einem Betonboden" loading="lazy"></div>
+        <div class="bigstep__txt"><h3>Fugen schneiden</h3><p>Beim Fugenschnitt wird der entstehende Schlamm direkt abgesaugt. So bleiben die Fugen sauber und lassen sich später gut verfüllen, zum Beispiel mit CreteFill.</p></div></li>
+      <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-4-reinigen.jpg" alt="Fertige Hallenfläche nach der maschinellen Reinigung" loading="lazy"></div>
+        <div class="bigstep__txt"><h3>Reinigen und übergeben</h3><p>Zum Abschluss wird die gesamte Fläche maschinell gereinigt. Danach ist der Boden fertig und kann genutzt werden.</p></div></li>
+    </ol>
+    <div class="video reveal" id="video" role="button" tabindex="0" aria-label="Anwendungsvideo auf YouTube abspielen" data-yt="qfEuiGrz6tM">
+      <img src="{p}assets/video-poster.jpg" alt="" loading="lazy">
+      <span class="video__play">{ic('play')}</span>
+      <div class="video__label"><b>Anwendung im Video</b><span>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ausfuehrung">
+  <div class="wrap coop">
+    <div class="reveal">
+      <h2 class="h2">So läuft die Zusammenarbeit</h2>
+      <p class="lead">Ashford Formula gibt es nicht im freien Handel. Damit das Ergebnis stimmt, setzt ein geschulter und zertifizierter Fachbetrieb jedes Projekt um.</p>
+      <ol class="flow">
+        <li><div><h3>Anfrage stellen</h3><p>Sie schildern kurz Objekt, Fläche und den geplanten Zeitraum.</p></div></li>
+        <li><div><h3>Beratung und Angebot</h3><p>Wir klären die Details und stimmen den Termin im Bauablauf ab.</p></div></li>
+        <li><div><h3>Ausführung</h3><p>Unser zertifizierter Partner bringt Ashford Formula fachgerecht auf.</p></div></li>
+        <li><div><h3>Garantie</h3><p>Auf Wunsch erhalten Sie eine Garantieerklärung über 20 Jahre.</p></div></li>
+      </ol>
+    </div>
+    <div class="partner reveal reveal-d1" id="stratec">
+      <img src="{p}assets/stratec-logo.png" alt="Stratec Industrieboden GmbH" class="partner__logo">
+      <h3>Ausführung durch Stratec Industrieboden</h3>
+      <p>In Deutschland übernimmt die Stratec Industrieboden GmbH die Anwendung von Ashford Formula. Das Team ist von Curecrete geschult und zertifiziert. Zeitpunkt, Menge und Verarbeitung stimmen, und nur so ist die Garantie über 20 Jahre möglich.</p>
+      <a class="partner__cert" href="{p}downloads/stratec-zertifikat-ashford-formula-2025.pdf" target="_blank" rel="noopener">
+        <img src="{p}assets/stratec-zertifikat.jpg" alt="Zertifikat von Curecrete für Stratec Industrieboden" loading="lazy">
+        <div><b>Zertifizierter Verarbeiter</b><span>Ausgestellt von Curecrete, gültig bis Mai 2027</span><em>Zertifikat ansehen {ic('file-pdf')}</em></div>
+      </a>
+      <a href="https://www.stratec-industrieboden.de/" target="_blank" rel="noopener" class="textlink">Zu Stratec Industrieboden {ic('arrow-up-right')}</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--concrete" id="pflege">
+  <div class="wrap care">
+    <div class="reveal">
+      <h2 class="h2">Nach der Übergabe</h2>
+      <p class="lead">Ein behandelter Boden braucht wenig Pflege. Mit der richtigen Reinigung bleibt er dicht, sauber und bekommt mit der Zeit einen leichten Glanz.</p>
+      <ul class="ticks">
+        <li>{ic('check-circle')}Regelmäßig Staub und Schmutz entfernen, damit nichts auf der Oberfläche schleift.</li>
+        <li>{ic('check-circle')}Mit einem auf Beton abgestimmten Reiniger wischen oder maschinell reinigen.</li>
+        <li>{ic('check-circle')}Keine sauren Reiniger verwenden, sie greifen die Oberfläche an.</li>
+      </ul>
+    </div>
+    <a class="care__product reveal reveal-d1" href="{p}produkte/creteclean/">
+      <div class="care__img"><img src="{p}assets/packshot-creteclean.png" alt="CreteClean Gebinde" loading="lazy"></div>
+      <div>
+        <span class="product__cat">Empfohlen für die Pflege</span>
+        <h3>CreteClean</h3>
+        <p>Der Reiniger von Curecrete für verdichtete und polierte Betonböden. Ohne Nachspülen, für Wischmopp und Scheuersaugmaschine.</p>
+        <span class="product__more">Zum Produkt {ic('arrow-right')}</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="note-row reveal">
+      <div>
+        <h2>Und bei einem bestehenden Boden?</h2>
+        <p>Ashford Formula ist für frischen Beton gedacht. Ältere Flächen lassen sich mit RetroPlate schleifen, verdichten und polieren.</p>
+      </div>
+      <a href="{p}produkte/retroplate/" class="textlink">Mehr zu RetroPlate {ic('arrow-right')}</a>
+    </div>
+    <div class="cta-band reveal">
+      <div>
+        <h2>Ihr Projekt steht an?</h2>
+        <p>Schildern Sie uns Objekt, Fläche und Zeitraum. Wir stimmen den Termin mit dem Fachbetrieb ab.</p>
+      </div>
+      <a href="{p}kontakt/" class="btn btn--red">Projekt anfragen {ic('arrow-right')}</a>
+    </div>
+  </div>
+</section>
+</main>
+"""
+    h += footer(p)
+    return h
+
+
 if __name__ == '__main__':
     open(os.path.join(ROOT, 'index.html'), 'w').write(home())
     os.makedirs(os.path.join(ROOT, 'produkte'), exist_ok=True)
     open(os.path.join(ROOT, 'produkte', 'index.html'), 'w').write(products_page())
+    os.makedirs(os.path.join(ROOT, 'anwendung'), exist_ok=True)
+    open(os.path.join(ROOT, 'anwendung', 'index.html'), 'w').write(anwendung_page())
     print('gebaut')
