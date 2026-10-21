@@ -189,6 +189,9 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
 .product__img{aspect-ratio:16/10;overflow:hidden;position:relative}
 .product__img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .product:hover .product__img img{transform:scale(1.05)}
+.product__img--pack{background:radial-gradient(circle at 50% 60%,#fff 0,var(--grey) 70%)}
+.product__img--pack img{object-fit:contain!important;padding:22px 18px 12px;filter:drop-shadow(0 12px 14px rgba(0,0,0,.12))}
+.product:hover .product__img--pack img{transform:scale(1.04)}
 .product__cat{position:absolute;left:16px;top:16px;background:#fff;font-family:var(--head);font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:2px}
 .product__cat--v{color:var(--red)}
 .product__body{padding:28px;display:flex;flex-direction:column;flex:1}
@@ -250,6 +253,11 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
 .partner-block__thumbs a{display:block;overflow:hidden;border-radius:var(--radius);aspect-ratio:4/3}
 .partner-block__thumbs img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 .partner-block__thumbs a:hover img{transform:scale(1.06)}
+.partner-block__cert{display:block;justify-self:center;width:100%;max-width:340px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:0 18px 40px rgba(0,0,0,.1);transition:transform .3s}
+.partner-block__cert:hover{transform:translateY(-4px)}
+.partner-block__cert img{width:100%;height:auto;border:1px solid var(--line)}
+.partner-block__cert span{display:flex;flex-direction:column;font-size:13px;color:var(--muted);margin-top:12px}
+.partner-block__cert b{font-family:var(--head);font-size:15px;color:var(--red)}
 .partner-block__video{position:relative;margin:0;justify-self:center;width:100%;max-width:320px}
 .partner-block__video video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:#000;box-shadow:0 24px 50px rgba(0,0,0,.18)}
 .partner-block__video figcaption{position:absolute;left:14px;bottom:14px;background:rgba(0,0,0,.6);color:#fff;font-size:13px;font-weight:600;padding:6px 10px;border-radius:3px}
@@ -617,7 +625,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         </div>
       </article>
       <article id="p-retroplate" class="product reveal reveal-d1">
-        <div class="product__img"><img src="assets/produkt-retroplate.jpg" alt="Polierter Betonboden in einem Wohnraum" loading="lazy"><span class="product__cat product__cat--v">Verdichten &amp; Polieren</span></div>
+        <div class="product__img product__img--pack"><img src="assets/packshot-retroplate.png" alt="RetroPlate Gebinde" loading="lazy"><span class="product__cat product__cat--v">Verdichten &amp; Polieren</span></div>
         <div class="product__body">
           <h3>RetroPlate</h3>
           <p>Das System für geschliffene und polierte Betonböden. Funktioniert auf neuem Beton genauso wie auf älteren Flächen, die wieder gut aussehen sollen.</p>
@@ -625,7 +633,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         </div>
       </article>
       <article id="p-retroguard" class="product reveal reveal-d2">
-        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto RetroGuard oder ein polierter Boden, auf dem Öl oder Flüssigkeit nicht einzieht.</span></div><span class="product__cat">Imprägnieren</span></div>
+        <div class="product__img product__img--pack"><img src="assets/packshot-retroguard.png" alt="RetroGuard Gebinde" loading="lazy"><span class="product__cat">Imprägnieren</span></div>
         <div class="product__body">
           <h3>RetroGuard</h3>
           <p>Schützt verdichtete und polierte Böden vor Flecken durch Öl, Fett und viele andere Flüssigkeiten, ohne die Optik zu verändern.</p>
@@ -633,7 +641,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         </div>
       </article>
       <article id="p-retropel" class="product reveal">
-        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto RetroPel oder Nahaufnahme von Wassertropfen, die auf Beton abperlen.</span></div><span class="product__cat">Imprägnieren</span></div>
+        <div class="product__img product__img--pack"><img src="assets/packshot-retropel.png" alt="RetroPel Gebinde" loading="lazy"><span class="product__cat">Imprägnieren</span></div>
         <div class="product__body">
           <h3>RetroPel</h3>
           <p>Macht Betonflächen wasser- und schmutzabweisend. Verschüttetes perlt ab und lässt sich einfach aufnehmen, bevor es einzieht.</p>
@@ -641,7 +649,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         </div>
       </article>
       <article id="p-creteclean" class="product reveal reveal-d1">
-        <div class="product__img"><img src="assets/produkt-creteclean.jpg" alt="Reinigung eines behandelten Betonbodens mit Scheuersaugmaschine" loading="lazy"><span class="product__cat">Reinigen</span></div>
+        <div class="product__img product__img--pack"><img src="assets/packshot-creteclean.png" alt="CreteClean Plus Gebinde" loading="lazy"><span class="product__cat">Reinigen</span></div>
         <div class="product__body">
           <h3>CreteClean</h3>
           <p>Ein Reiniger, der auf Beton abgestimmt ist. Er hält verdichtete und polierte Böden sauber und greift die Oberfläche dabei nicht an.</p>
@@ -649,7 +657,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         </div>
       </article>
       <article id="p-cretefill" class="product reveal reveal-d2">
-        <div class="product__img"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h3l2-3h6l2 3h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="4"/></svg><b>Bild folgt</b><span>Produktfoto CreteFill oder Nahaufnahme einer verfüllten Fuge im Hallenboden.</span></div><span class="product__cat">Reparieren</span></div>
+        <div class="product__img product__img--pack"><img src="assets/packshot-cretefill.png" alt="CreteFill Pro 85 Gebinde" loading="lazy"><span class="product__cat">Reparieren</span></div>
         <div class="product__body">
           <h3>CreteFill</h3>
           <p>Füllt Fugen, Risse und kleine Ausbrüche. So bleiben die Kanten stabil und werden durch Fahrverkehr nicht weiter beschädigt.</p>
@@ -670,7 +678,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
     </div>
     <div class="steps">
       <div class="step">
-        <div class="step__img reveal"><img src="assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird auf die Betonfläche gesprüht" loading="lazy"><span class="step__no">1</span></div>
+        <div class="step__img reveal"><img src="assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird mit der Sprühlanze auf die Hallenfläche aufgebracht" loading="lazy"><span class="step__no">1</span></div>
         <div class="reveal reveal-d1"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen.</p><span class="step__meta">Richtwert: rund 200 g pro m²</span></div>
       </div>
       <div class="step">
@@ -682,7 +690,7 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         <div class="reveal reveal-d1"><h3>Fugen schneiden und säubern</h3><p>Beim Fugenschnitt wird der entstehende Schlamm direkt abgesaugt. So bleiben die Fugen sauber und lassen sich später gut verfüllen.</p></div>
       </div>
       <div class="step">
-        <div class="step__img reveal"><img src="assets/schritt-4-reinigen.jpg" alt="Reinigung der behandelten Fläche mit einer Aufsitz-Scheuersaugmaschine" loading="lazy"><span class="step__no">4</span></div>
+        <div class="step__img reveal"><img src="assets/schritt-4-reinigen.jpg" alt="Fertige Hallenfläche nach der maschinellen Reinigung" loading="lazy"><span class="step__no">4</span></div>
         <div class="reveal reveal-d1"><h3>Maschinell reinigen</h3><p>Zum Abschluss wird die gesamte Fläche maschinell gereinigt. Danach ist der Boden fertig und kann übergeben werden.</p></div>
       </div>
     </div>
@@ -719,17 +727,14 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em}
         <span class="eyebrow">Zertifizierter Partner</span>
         <img src="assets/stratec-logo.png" alt="Stratec Industrieboden GmbH" class="partner-block__logo">
         <h3>Ausführung durch Stratec Industrieboden</h3>
-        <p>In Deutschland übernimmt die Stratec Industrieboden GmbH als zertifizierter Fachbetrieb die Anwendung von Ashford Formula. Das Team ist vom Hersteller geschult und sorgt dafür, dass Zeitpunkt, Menge und Verarbeitung genau stimmen. Nur so ist die Garantie über 20 Jahre möglich.</p>
-        <div class="partner-block__thumbs">
-          <a href="assets/stratec-1.jpg" class="js-lightbox"><img src="assets/stratec-1.jpg" alt="Team beim Verteilen und Reinigen auf einer Baustelle" loading="lazy"></a>
-          <a href="assets/stratec-2.jpg" class="js-lightbox"><img src="assets/stratec-2.jpg" alt="Abziehen der Fläche zwischen Betonstützen" loading="lazy"></a>
-        </div>
+        <p>In Deutschland übernimmt die Stratec Industrieboden GmbH als zertifizierter Fachbetrieb die Anwendung von Ashford Formula. Das Team ist vom Hersteller Curecrete geschult und zertifiziert und sorgt dafür, dass Zeitpunkt, Menge und Verarbeitung genau stimmen. Nur so ist die Garantie über 20 Jahre möglich.</p>
+        
         <a href="https://www.stratec-industrieboden.de/" target="_blank" rel="noopener" class="btn btn--dark">Zu Stratec Industrieboden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
       </div>
-      <figure class="partner-block__video">
-        <video src="assets/video/anwendung-baustelle.mp4" poster="assets/video/anwendung-baustelle-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Video: Anwendung von Ashford Formula auf einer Baustelle"></video>
-        <figcaption>Ashford Formula im Einsatz</figcaption>
-      </figure>
+      <a class="partner-block__cert" href="downloads/stratec-zertifikat-ashford-formula-2025.pdf" target="_blank" rel="noopener">
+        <img src="assets/stratec-zertifikat.jpg" alt="Zertifikat von Curecrete für Stratec Industrieboden als Verarbeiter von Ashford Formula" loading="lazy">
+        <span><b>Zertifikat ansehen</b>Ausgestellt von Curecrete, gültig bis Mai 2027</span>
+      </a>
     </div>
   </div>
 </section>
