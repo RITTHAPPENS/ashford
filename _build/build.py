@@ -8,6 +8,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ICONS = json.load(open(os.path.join(ROOT, '_build', 'icons.json')))
 
 
+import hashlib
+
+
+def ver(rel):
+    return hashlib.md5(open(os.path.join(ROOT, rel), 'rb').read()).hexdigest()[:8]
+
+
 def ic(name, cls='icon'):
     return '<svg class="%s" viewBox="0 0 256 256" aria-hidden="true">%s</svg>' % (cls, ICONS[name])
 
@@ -40,7 +47,7 @@ def head(p, title, desc):
 <meta name="theme-color" content="#16171A">
 <link rel="preload" href="{p}assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{p}assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{p}assets/css/style.css">
+<link rel="stylesheet" href="{p}assets/css/style.css?v={ver('assets/css/style.css')}">
 </head>
 <body>
 '''
@@ -111,7 +118,7 @@ def footer(p):
 </footer>
 <div class="lightbox" id="lightbox" role="dialog" aria-label="Bildansicht"><button aria-label="Schließen">{ic('x')}</button></div>
 <div class="toast" id="toast" role="status"></div>
-<script src="{p}assets/js/main.js"></script>
+<script src="{p}assets/js/main.js?v={ver('assets/js/main.js')}"></script>
 </body>
 </html>
 '''
