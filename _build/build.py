@@ -46,7 +46,7 @@ def head(p, title, desc):
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#16171A">
 <link rel="preload" href="{p}assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{p}assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{p}assets/fonts/plex-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{p}assets/css/style.css?v={ver('assets/css/style.css')}">
 </head>
 <body>
