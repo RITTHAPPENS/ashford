@@ -22,13 +22,13 @@ def ic(name, cls='icon'):
 PRODUCTS = [
     # slug, Name, Kategorie, Bild, Foto?, Kurztext
     ('ashford-formula', 'Ashford Formula', 'Verdichten', 'produkt-ashford.jpg', True,
-     'Der Klassiker für frischen Beton. Direkt nach dem Glätten aufgebracht, macht er die Oberfläche dauerhaft hart, dicht und staubfrei.'),
+     'Der Klassiker für Industrieböden, im Neubau und im Bestand. Er dringt 3 bis 5 mm tief ein und macht die Oberfläche dauerhaft hart, dicht und staubfrei.'),
     ('retroplate', 'RetroPlate', 'Verdichten und Polieren', 'packshot-retroplate.png', False,
      'Das System für geschliffene und polierte Betonböden. Für neuen Beton genauso wie für ältere Flächen, die wieder gut aussehen sollen.'),
     ('retroguard', 'RetroGuard', 'Schützen', 'packshot-retroguard.png', False,
      'Schützt verdichtete und polierte Böden vor Flecken durch Öl, Fett und viele andere Flüssigkeiten, ohne die Optik zu verändern.'),
     ('retropel', 'RetroPel', 'Schützen', 'packshot-retropel.png', False,
-     'Macht Beton wasser- und schmutzabweisend. Verschüttetes perlt ab und lässt sich aufnehmen, bevor es einzieht.'),
+     'Macht Beton öl- und wasserabweisend. Verschüttetes perlt ab und lässt sich aufnehmen, bevor es einzieht.'),
     ('creteclean', 'CreteClean', 'Pflegen', 'packshot-creteclean.png', False,
      'Ein Reiniger, der auf Beton abgestimmt ist. Er hält verdichtete und polierte Böden sauber und greift die Oberfläche nicht an.'),
     ('cretefill', 'CreteFill', 'Reparieren', 'packshot-cretefill.png', False,
@@ -255,10 +255,10 @@ def home():
     </a>
     <div class="reveal reveal-d1">
       <h2 class="h2">Aufgebracht im normalen Bauablauf</h2>
-      <p class="lead">Ashford Formula kommt zwischen Glätten und Fugenschnitt auf den frischen Beton. Es entsteht kein zusätzlicher Bauabschnitt und keine Wartezeit.</p>
+      <p class="lead">Im Neubau kommt Ashford Formula zwischen Glätten und Fugenschnitt auf den frischen Beton. Es entsteht kein zusätzlicher Bauabschnitt und keine Wartezeit.</p>
       <ul class="ticks">
         <li>{ic('check-circle')}Aufsprühen, verteilen, Fugen schneiden, reinigen</li>
-        <li>{ic('check-circle')}Rund 200 g pro m², einmalig</li>
+        <li>{ic('check-circle')}Ca. 150 bis 250 g pro m², einmalig</li>
         <li>{ic('check-circle')}Ausgeführt von einem zertifizierten Fachbetrieb</li>
       </ul>
       <div class="teaser__partner">
@@ -338,13 +338,13 @@ def form():
 # Produktübersicht
 # ======================================================================
 DETAILS = {
-    'ashford-formula': (['Für frischen Beton, direkt nach dem Glätten', 'Einmal auftragen, die Wirkung bleibt im Beton', 'Wasserbasiert und frei von Lösemitteln', '20 Jahre Garantie bei Ausführung durch Fachbetrieb'],
+    'ashford-formula': (['Für Neubau und Bestand, Eindringtiefe 3 bis 5 mm', 'Bis zu 32,5 % mehr Abriebfestigkeit (ASTM C779)', 'Wasserbasiert, lösemittelfrei, 0 g/L VOC', 'Farbe und Optik des Bodens bleiben erhalten'],
                         ['Neubau', 'Industrie', 'Logistik', 'Tiefgaragen']),
     'retroplate': (['Schleifen, verdichten und polieren in einem System', 'Für neue und bestehende Betonböden', 'Optik von seidenmatt bis hochglänzend'],
                    ['Showrooms', 'Handel', 'Büros', 'Wohnräume']),
     'retroguard': (['Schutz vor Flecken und Anätzungen', 'Gebrauchsfertig, ohne Anmischen', 'Für verdichtete und polierte Böden'],
                    ['Gastronomie', 'Handel', 'Lebensmittel']),
-    'retropel': (['Flüssigkeiten perlen ab, statt einzuziehen', 'Erleichtert die Reinigung im Alltag', 'Verändert die Optik des Bodens nicht'],
+    'retropel': (['Öl- und wasserabweisend für Beton und Terrazzo', 'Tiefenimprägnierung statt Oberflächenversiegelung', 'Schützt frisch verdichtete und polierte Böden', 'Verändert die Optik des Bodens nicht'],
                  ['Werkstätten', 'Eingangsbereiche', 'Lager']),
     'creteclean': (['Auf den pH-Wert von Beton abgestimmt', 'Ohne Nachspülen, für Wischmopp und Scheuersaugmaschine', 'Lässt feine Kratzer weniger sichtbar werden'],
                    ['Tägliche Reinigung', 'Polierte Böden', 'Große Flächen']),
@@ -359,7 +359,7 @@ GROUPS = [
 ]
 
 FINDER = [
-    ('Neuer Betonboden in Halle, Lager oder Tiefgarage', 'ashford-formula', 'Ashford Formula'),
+    ('Betonboden in Halle, Lager oder Tiefgarage, neu oder bestehend', 'ashford-formula', 'Ashford Formula'),
     ('Polierte Optik, auch für einen bestehenden Boden', 'retroplate', 'RetroPlate'),
     ('Schutz vor Öl, Fett und Flecken', 'retroguard', 'RetroGuard'),
     ('Wasser und Schmutz sollen abperlen', 'retropel', 'RetroPel'),
@@ -387,8 +387,8 @@ def products_page():
             tl = ''.join(f'<li>{ic("check-circle")}{t}</li>' for t in ticks)
             tg = ''.join(f'<li>{t}</li>' for t in tags)
             imgcls = 'pd__img pd__img--photo' if photo else 'pd__img'
-            dl = (f'<a href="{p}downloads/" class="btn btn--line">Datenblatt {ic("file-pdf")}</a>'
-                  if s != 'cretefill' else '<span class="pd__soon">Datenblatt folgt</span>')
+            dl = (f'<a href="{p}downloads/datenblatt-{s}.pdf" target="_blank" rel="noopener" class="btn btn--line">Datenblatt {ic("file-pdf")}</a>'
+                  if s in ('ashford-formula', 'retroplate', 'retropel') else '<span class="pd__soon">Datenblatt folgt</span>')
             items += f'''
         <article class="pd reveal{' reveal-d1' if i else ''}" id="{s}">
           <div class="{imgcls}"><img src="{p}assets/{img}" alt="{n}" loading="lazy"></div>
@@ -416,7 +416,7 @@ def products_page():
 <section class="page-head">
   <div class="wrap">
     <h1>Produkte</h1>
-    <p class="lead">Sechs Produkte von Curecrete, die aufeinander abgestimmt sind. Vom frischen Beton über den Schutz bis zur täglichen Pflege.</p>
+    <p class="lead">Sechs Produkte von Curecrete, die aufeinander abgestimmt sind. Vom Verdichten über den Schutz bis zur täglichen Pflege.</p>
     <ol class="system" aria-label="Das System">
       <li><a href="#verdichten"><b>Verdichten</b><span>Ashford Formula, RetroPlate</span></a></li>
       <li><a href="#schuetzen"><b>Schützen</b><span>RetroGuard, RetroPel</span></a></li>
@@ -468,17 +468,17 @@ def anwendung_page():
 <section class="page-head">
   <div class="wrap">
     <h1>Anwendung</h1>
-    <p class="lead">Ashford Formula wird einmal auf den frischen Beton aufgebracht und wirkt danach im Material selbst. So läuft es ab, vom ersten Sprühstoß bis zur Pflege im Alltag.</p>
+    <p class="lead">Ashford Formula wird einmal aufgebracht und wirkt danach im Material selbst, im Neubau wie auf bestehenden Böden. So läuft es ab, vom ersten Sprühstoß bis zur Pflege im Alltag.</p>
     <ul class="facts">
       <li>{ic('calendar-check')}<div><b>Zeitpunkt</b><span>Zwischen Glätten und Fugenschnitt</span></div></li>
-      <li>{ic('drop')}<div><b>Menge</b><span>Rund 200 g pro m², einmalig</span></div></li>
+      <li>{ic('drop')}<div><b>Menge</b><span>Ca. 150 bis 250 g pro m², je nach Untergrund</span></div></li>
       <li>{ic('clock-counter-clockwise')}<div><b>Aufwand</b><span>Läuft im normalen Bauablauf mit</span></div></li>
     </ul>
   </div>
 </section>
 
 <section class="sec" id="wirkweise">
-  <div class="wrap how">
+  <div class="wrap how how--stack">
     <div class="reveal">
       <h2 class="h2">Was im Beton passiert</h2>
       <p>Frischer Beton ist voller winziger Hohlräume. Dort sammeln sich Wasser und Schmutz, und an der Oberfläche löst sich nach und nach feiner Staub.</p>
@@ -490,9 +490,7 @@ def anwendung_page():
       </ul>
     </div>
     <figure class="how__fig reveal reveal-d1">
-      <!-- Platzhalter: polnische Originalgrafik, wird durch die deutsche Fassung ersetzt -->
-      <img src="{p}assets/wirkweise-grafik.png" alt="Vergleich: herkömmliche Imprägnierung bleibt als Film auf der Oberfläche, Ashford Formula dringt ein und bildet Kristalle" loading="lazy">
-      <figcaption><span>Links: herkömmliche Imprägnierung</span><span>Rechts: Ashford Formula</span></figcaption>
+      <img src="{p}assets/wirkweise-grafik.jpg" alt="Vergleich: herkömmliche Imprägnierung bleibt als Film auf der Oberfläche, Ashford Formula dringt ein und bildet Kristalle" loading="lazy">
     </figure>
   </div>
 </section>
@@ -501,11 +499,11 @@ def anwendung_page():
   <div class="wrap">
     <div class="sec-head reveal">
       <h2 class="h2">Der Ablauf auf der Baustelle</h2>
-      <p class="lead">Vier Arbeitsschritte, die direkt an das Glätten des Betons anschließen. Entscheidend sind der richtige Zeitpunkt und eine gleichmäßige Menge.</p>
+      <p class="lead">Im Neubau sind es vier Arbeitsschritte, die direkt an das Glätten des Betons anschließen. Entscheidend sind der richtige Zeitpunkt und eine gleichmäßige Menge.</p>
     </div>
     <ol class="bigsteps">
       <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird mit der Sprühlanze auf die Hallenfläche aufgebracht" loading="lazy"></div>
-        <div class="bigstep__txt"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen, als Richtwert gelten rund 200 g pro m².</p></div></li>
+        <div class="bigstep__txt"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen, je nach Saugfähigkeit des Untergrunds rund 150 bis 250 g pro m².</p></div></li>
       <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-2-verteilen.jpg" alt="Arbeiter verteilen Ashford Formula mit breiten Besen" loading="lazy"></div>
         <div class="bigstep__txt"><h3>Verteilen</h3><p>Mit breiten, weichen Besen wird das Material über die ganze Fläche verteilt, damit jede Stelle genug aufnimmt. Jetzt beginnt die Reaktion im Beton.</p></div></li>
       <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-3-fugen.jpg" alt="Fugenschneider mit Absaugung auf einem Betonboden" loading="lazy"></div>
@@ -573,8 +571,8 @@ def anwendung_page():
   <div class="wrap">
     <div class="note-row reveal">
       <div>
-        <h2>Und bei einem bestehenden Boden?</h2>
-        <p>Ashford Formula ist für frischen Beton gedacht. Ältere Flächen lassen sich mit RetroPlate schleifen, verdichten und polieren.</p>
+        <h2>Polierte Optik gewünscht?</h2>
+        <p>Ashford Formula verdichtet die Oberfläche und erhält ihre Optik. Wer einen glänzenden, polierten Boden möchte, neu oder bestehend, greift zu RetroPlate.</p>
       </div>
       <a href="{p}produkte/retroplate/" class="textlink">Mehr zu RetroPlate {ic('arrow-right')}</a>
     </div>
