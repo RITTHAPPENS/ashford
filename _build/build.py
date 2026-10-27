@@ -32,7 +32,7 @@ PRODUCTS = [
     ('creteclean', 'CreteClean', 'Pflegen', 'packshot-creteclean.png', False,
      'Ein Reiniger, der auf Beton abgestimmt ist. Er hält verdichtete und polierte Böden sauber und greift die Oberfläche nicht an.'),
     ('cretefill', 'CreteFill', 'Reparieren', 'packshot-cretefill.png', False,
-     'Füllt Fugen, Risse und kleine Ausbrüche. So bleiben die Kanten stabil und werden durch Fahrverkehr nicht weiter beschädigt.'),
+     'Repariert Ausbrüche, große Risse und beschädigte Fugenkanten. Mit Sand gemischt entsteht ein sehr fester Polymerbeton, der schnell wieder belastbar ist.'),
 ]
 
 
@@ -342,13 +342,13 @@ DETAILS = {
                         ['Neubau', 'Industrie', 'Logistik', 'Tiefgaragen']),
     'retroplate': (['Schleifen, verdichten und polieren in einem System', 'Für neue und bestehende Betonböden', 'Optik von seidenmatt bis hochglänzend'],
                    ['Showrooms', 'Handel', 'Büros', 'Wohnräume']),
-    'retroguard': (['Schutz vor Flecken und Anätzungen', 'Gebrauchsfertig, ohne Anmischen', 'Für verdichtete und polierte Böden'],
+    'retroguard': (['Schutz vor Flecken und Säureverätzungen', 'Gebrauchsfertig, mit hochglänzendem Finish', 'Für Beton und Terrazzo, ca. 37 bis 50 m² pro Liter'],
                    ['Gastronomie', 'Handel', 'Lebensmittel']),
     'retropel': (['Öl- und wasserabweisend für Beton und Terrazzo', 'Tiefenimprägnierung statt Oberflächenversiegelung', 'Schützt frisch verdichtete und polierte Böden', 'Verändert die Optik des Bodens nicht'],
                  ['Werkstätten', 'Eingangsbereiche', 'Lager']),
     'creteclean': (['Auf den pH-Wert von Beton abgestimmt', 'Ohne Nachspülen, für Wischmopp und Scheuersaugmaschine', 'Lässt feine Kratzer weniger sichtbar werden'],
                    ['Tägliche Reinigung', 'Polierte Böden', 'Große Flächen']),
-    'cretefill': (['Zweikomponentiger Fugenfüller', 'Stabilisiert Fugenkanten bei Fahrverkehr', 'Auch für Risse und kleine Ausbrüche'],
+    'cretefill': (['Zweikomponentiges Reparatursystem, Mischung 1:1', 'Mit Sand gemischt ein extrem fester Polymerbeton', 'Nach rund 45 Minuten wieder befahrbar'],
                   ['Hallen mit Staplerverkehr', 'Logistik', 'Sanierung']),
 }
 
@@ -388,7 +388,7 @@ def products_page():
             tg = ''.join(f'<li>{t}</li>' for t in tags)
             imgcls = 'pd__img pd__img--photo' if photo else 'pd__img'
             dl = (f'<a href="{p}downloads/datenblatt-{s}.pdf" target="_blank" rel="noopener" class="btn btn--line">Datenblatt {ic("file-pdf")}</a>'
-                  if s in ('ashford-formula', 'retroplate', 'retropel') else '<span class="pd__soon">Datenblatt folgt</span>')
+                  if s in ('ashford-formula', 'retroplate', 'retropel', 'retroguard', 'cretefill') else '<span class="pd__soon">Datenblatt folgt</span>')
             items += f'''
         <article class="pd reveal{' reveal-d1' if i else ''}" id="{s}">
           <div class="{imgcls}"><img src="{p}assets/{img}" alt="{n}" loading="lazy"></div>
