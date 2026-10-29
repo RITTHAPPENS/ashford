@@ -145,7 +145,7 @@ def product_card(p, prod, i):
 def home():
     p = ''
     h = head(p, 'Ashford Formula Deutschland | Betonverdichter für Industrieböden',
-             'Ashford Formula macht Betonböden dauerhaft staubfrei und abriebfester. Exklusiv in Deutschland über Beltex Commerce, ausgeführt von zertifizierten Fachbetrieben.')
+             'Ashford Formula macht Betonböden dauerhaft staubfrei, härter und abriebfester. Exklusiv in Deutschland über Beltex Commerce, ausgeführt von zertifizierten Fachbetrieben.')
     h += header(p)
     cards = '\n      '.join(product_card(p, pr, i) for i, pr in enumerate(PRODUCTS))
     h += f'''
@@ -196,6 +196,7 @@ def home():
       <ul class="figures">
         <li class="figure reveal"><div class="figure__n num"><span data-count="100">100</span><small>%</small></div><div><h3>staubfrei</h3><p>Der Boden gibt keinen Zementstaub mehr ab. Das schont Mitarbeiter, Technik und gelagerte Ware.</p></div></li>
         <li class="figure reveal"><div class="figure__n num"><span data-count="33">33</span><small>%</small></div><div><h3>abriebfester</h3><p>Stapler, Hubwagen und Palettenverkehr hinterlassen deutlich weniger Spuren.</p></div></li>
+        <li class="figure reveal"><div class="figure__n num"><span data-count="38">38</span><small>%</small></div><div><h3>härter</h3><p>Die Oberfläche wird widerstandsfähiger, auch gegen Stöße und punktuelle Last.</p></div></li>
       </ul>
     </div>
     <div class="extras">
