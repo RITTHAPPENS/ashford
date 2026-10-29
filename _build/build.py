@@ -346,7 +346,7 @@ DETAILS = {
                    ['Gastronomie', 'Handel', 'Lebensmittel']),
     'retropel': (['Öl- und wasserabweisend für Beton und Terrazzo', 'Tiefenimprägnierung statt Oberflächenversiegelung', 'Schützt frisch verdichtete und polierte Böden', 'Verändert die Optik des Bodens nicht'],
                  ['Werkstätten', 'Eingangsbereiche', 'Lager']),
-    'creteclean': (['Auf den pH-Wert von Beton abgestimmt', 'Ohne Nachspülen, für Wischmopp und Scheuersaugmaschine', 'Lässt feine Kratzer weniger sichtbar werden'],
+    'creteclean': (['Für verdichteten und polierten Beton', 'Für Wischmopp und Scheuersaugmaschine, ca. 7,8 ml pro Liter Wasser', 'Mit Scar Guard für weniger sichtbare Kratzer'],
                    ['Tägliche Reinigung', 'Polierte Böden', 'Große Flächen']),
     'cretefill': (['Zweikomponentiges Reparatursystem, Mischung 1:1', 'Mit Sand gemischt ein extrem fester Polymerbeton', 'Nach rund 45 Minuten wieder befahrbar'],
                   ['Hallen mit Staplerverkehr', 'Logistik', 'Sanierung']),
@@ -388,7 +388,7 @@ def products_page():
             tg = ''.join(f'<li>{t}</li>' for t in tags)
             imgcls = 'pd__img pd__img--photo' if photo else 'pd__img'
             dl = (f'<a href="{p}downloads/datenblatt-{s}.pdf" target="_blank" rel="noopener" class="btn btn--line">Datenblatt {ic("file-pdf")}</a>'
-                  if s in ('ashford-formula', 'retroplate', 'retropel', 'retroguard', 'cretefill') else '<span class="pd__soon">Datenblatt folgt</span>')
+                  if s in ('ashford-formula', 'retroplate', 'retropel', 'retroguard', 'cretefill', 'creteclean') else '<span class="pd__soon">Datenblatt folgt</span>')
             items += f'''
         <article class="pd reveal{' reveal-d1' if i else ''}" id="{s}">
           <div class="{imgcls}"><img src="{p}assets/{img}" alt="{n}" loading="lazy"></div>
@@ -559,11 +559,12 @@ def anwendung_page():
       <div class="care__img"><img src="{p}assets/packshot-creteclean.png" alt="CreteClean Gebinde" loading="lazy"></div>
       <div>
         <span class="product__cat">Empfohlen für die Pflege</span>
-        <h3>CreteClean</h3>
-        <p>Der Reiniger von Curecrete für verdichtete und polierte Betonböden. Ohne Nachspülen, für Wischmopp und Scheuersaugmaschine.</p>
+        <h3>CreteClean Plus</h3>
+        <p>Der Reiniger von Curecrete für verdichtete und polierte Betonböden. Für Wischmopp und Scheuersaugmaschine, empfohlen etwa dreimal pro Woche.</p>
         <span class="product__more">Zum Produkt {ic('arrow-right')}</span>
       </div>
     </a>
+    <p class="care__dl reveal"><a href="{p}downloads/reinigungsanleitung-creteclean.pdf" target="_blank" rel="noopener" class="textlink">Reinigungsanleitung für Scheuersaugmaschinen {ic('file-pdf')}</a></p>
   </div>
 </section>
 
