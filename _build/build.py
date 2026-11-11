@@ -26,7 +26,7 @@ PRODUCTS = [
     ('retroplate', 'RetroPlate', 'Verdichten und Polieren', 'packshot-retroplate.png', False,
      'Das System für geschliffene und polierte Betonböden. Für neuen Beton genauso wie für ältere Flächen, die wieder gut aussehen sollen.'),
     ('retroguard', 'RetroGuard', 'Schützen', 'packshot-retroguard.png', False,
-     'Schützt verdichtete und polierte Böden vor Flecken durch Öl, Fett und viele andere Flüssigkeiten, ohne die Optik zu verändern.'),
+     'Schützt verdichtete und polierte Böden vor Flecken und Säureverätzungen und gibt ihnen ein glänzendes Finish.'),
     ('retropel', 'RetroPel', 'Schützen', 'packshot-retropel.png', False,
      'Macht Beton öl- und wasserabweisend. Verschüttetes perlt ab und lässt sich aufnehmen, bevor es einzieht.'),
     ('creteclean', 'CreteClean Plus', 'Pflegen', 'packshot-creteclean.png', False,
@@ -313,7 +313,7 @@ def home():
     return h
 
 
-def form():
+def form(p=''):
     return f'''<form class="form reveal reveal-d1" id="form" novalidate>
       <h3>Projekt anfragen</h3>
       <p>Unverbindlich und kostenlos. Felder mit * sind Pflicht.</p>
@@ -328,7 +328,7 @@ def form():
         <div class="field field--full"><label for="f-zeit">Geplanter Zeitraum</label><input id="f-zeit" name="zeitraum" type="text" placeholder="z. B. Frühjahr 2027"></div>
         <div class="field field--full"><label for="f-msg">Nachricht</label><textarea id="f-msg" name="nachricht"></textarea></div>
         <label class="check"><input type="checkbox" name="rueckruf"><span>Bitte rufen Sie mich zurück.</span></label>
-        <label class="check"><input type="checkbox" name="datenschutz" required><span>Ich habe die <a href="datenschutz/">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden. *</span></label>
+        <label class="check"><input type="checkbox" name="datenschutz" required><span>Ich habe die <a href="{p}datenschutz/">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben einverstanden. *</span></label>
       </div>
       <button type="submit" class="btn btn--red">Anfrage senden {ic('arrow-right')}</button>
     </form>'''
@@ -592,10 +592,14 @@ def anwendung_page():
     return h
 
 
+from pages import *  # noqa
+
+
 if __name__ == '__main__':
     open(os.path.join(ROOT, 'index.html'), 'w').write(home())
     os.makedirs(os.path.join(ROOT, 'produkte'), exist_ok=True)
     open(os.path.join(ROOT, 'produkte', 'index.html'), 'w').write(products_page())
     os.makedirs(os.path.join(ROOT, 'anwendung'), exist_ok=True)
     open(os.path.join(ROOT, 'anwendung', 'index.html'), 'w').write(anwendung_page())
+    build_rest(ROOT)
     print('gebaut')

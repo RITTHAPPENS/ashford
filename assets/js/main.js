@@ -34,11 +34,30 @@ document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
 const lb = document.getElementById('lightbox');
 if (lb) {
   const img = document.createElement('img'); lb.appendChild(img);
-  document.querySelectorAll('.gallery a').forEach(a => a.addEventListener('click', e => {
-    e.preventDefault(); img.src = a.href; img.alt = a.querySelector('img')?.alt || ''; lb.classList.add('is-open'); lb.querySelector('button').focus();
+  const mk = (cls, label, d) => { const b = document.createElement('button'); b.className = 'lightbox__nav ' + cls; b.setAttribute('aria-label', label);
+    b.innerHTML = `<svg class="icon" viewBox="0 0 256 256" aria-hidden="true"><path d="${d}"/></svg>`; lb.appendChild(b); return b; };
+  const prev = mk('lightbox__prev', 'Vorheriges Foto', 'M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z');
+  const next = mk('lightbox__next', 'Nächstes Foto', 'M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z');
+  let group = [], idx = 0;
+  const showAt = i => { idx = (i + group.length) % group.length; const a = group[idx]; img.src = a.href;
+    img.alt = a.querySelector('img')?.alt || a.getAttribute('aria-label') || ''; };
+  const close = () => lb.classList.remove('is-open', 'has-nav');
+  document.querySelectorAll('.gallery a, .proj a').forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    group = [...a.closest('.gallery, .proj').querySelectorAll('a')];
+    showAt(group.indexOf(a));
+    lb.classList.add('is-open'); lb.classList.toggle('has-nav', group.length > 1); lb.querySelector('button').focus();
   }));
-  lb.addEventListener('click', () => lb.classList.remove('is-open'));
-  addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('is-open'); });
+  prev.addEventListener('click', e => { e.stopPropagation(); showAt(idx - 1); });
+  next.addEventListener('click', e => { e.stopPropagation(); showAt(idx + 1); });
+  img.addEventListener('click', e => { if (group.length > 1) { e.stopPropagation(); showAt(idx + 1); } });
+  lb.addEventListener('click', close);
+  addEventListener('keydown', e => {
+    if (!lb.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    if (group.length > 1 && e.key === 'ArrowRight') showAt(idx + 1);
+    if (group.length > 1 && e.key === 'ArrowLeft') showAt(idx - 1);
+  });
 }
 
 // Hinweis-Toast
