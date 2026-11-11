@@ -197,7 +197,7 @@ def product_page(slug):
   <div class="wrap pspec">
     <div class="reveal">
       <h2 class="h2">Technische Daten</h2>
-      <p class="lead">Die wichtigsten Werte im Überblick. Alle Angaben, Sicherheitshinweise und Prüfnormen stehen im Datenblatt.</p>
+      <p>Die wichtigsten Werte im Überblick. Alle Angaben, Sicherheitshinweise und Prüfnormen stehen im Datenblatt.</p>
       <p class="pspec__note">{d["note"]}</p>
       <div class="pspec__uses"><span>Typisch für</span><ul class="chips">{uses}</ul></div>
       <a href="{p}downloads/datenblatt-{slug}.pdf" target="_blank" rel="noopener" class="textlink">Datenblatt als PDF {ic("file-pdf")}</a>

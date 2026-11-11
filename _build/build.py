@@ -255,7 +255,7 @@ def home():
     </a>
     <div class="reveal reveal-d1">
       <h2 class="h2">Aufgebracht im normalen Bauablauf</h2>
-      <p class="lead">Im Neubau kommt Ashford Formula zwischen Glätten und Fugenschnitt auf den frischen Beton. Es entsteht kein zusätzlicher Bauabschnitt und keine Wartezeit.</p>
+      <p>Im Neubau kommt Ashford Formula zwischen Glätten und Fugenschnitt auf den frischen Beton. Es entsteht kein zusätzlicher Bauabschnitt und keine Wartezeit.</p>
       <ul class="ticks">
         <li>{ic('check-circle')}Aufsprühen, verteilen, Fugen schneiden, reinigen</li>
         <li>{ic('check-circle')}Ca. 150 bis 250 g pro m², einmalig</li>
@@ -296,7 +296,7 @@ def home():
   <div class="wrap contact">
     <div class="reveal">
       <h2 class="h2">Sie planen einen neuen Betonboden?</h2>
-      <p class="lead">Erzählen Sie uns von Ihrem Projekt. Wir melden uns schnellstmöglich und bringen Sie mit dem passenden Fachbetrieb zusammen.</p>
+      <p>Erzählen Sie uns von Ihrem Projekt. Wir melden uns schnellstmöglich und bringen Sie mit dem passenden Fachbetrieb zusammen.</p>
       <ul class="contact__info">
         <li>{ic('envelope-simple')}<div><small>E-Mail</small><a href="mailto:info@beltex.org">info@beltex.org</a></div></li>
         <li>{ic('map-pin')}<div><small>Vertrieb in Deutschland</small>Beltex Commerce, Berliner Straße 21, 56470 Bad Marienberg</div></li>
@@ -523,7 +523,7 @@ def anwendung_page():
   <div class="wrap coop">
     <div class="reveal">
       <h2 class="h2">So läuft die Zusammenarbeit</h2>
-      <p class="lead">Ashford Formula gibt es nicht im freien Handel. Damit das Ergebnis stimmt, setzt ein geschulter und zertifizierter Fachbetrieb jedes Projekt um.</p>
+      <p>Ashford Formula gibt es nicht im freien Handel. Damit das Ergebnis stimmt, setzt ein geschulter und zertifizierter Fachbetrieb jedes Projekt um.</p>
       <ol class="flow">
         <li><div><h3>Anfrage stellen</h3><p>Sie schildern kurz Objekt, Fläche und den geplanten Zeitraum.</p></div></li>
         <li><div><h3>Beratung und Angebot</h3><p>Wir klären die Details und stimmen den Termin im Bauablauf ab.</p></div></li>
@@ -548,7 +548,7 @@ def anwendung_page():
   <div class="wrap care">
     <div class="reveal">
       <h2 class="h2">Nach der Übergabe</h2>
-      <p class="lead">Ein behandelter Boden braucht wenig Pflege. Mit der richtigen Reinigung bleibt er dicht, sauber und bekommt mit der Zeit einen leichten Glanz.</p>
+      <p>Ein behandelter Boden braucht wenig Pflege. Mit der richtigen Reinigung bleibt er dicht, sauber und bekommt mit der Zeit einen leichten Glanz.</p>
       <ul class="ticks">
         <li>{ic('check-circle')}Regelmäßig Staub und Schmutz entfernen, damit nichts auf der Oberfläche schleift.</li>
         <li>{ic('check-circle')}Mit einem auf Beton abgestimmten Reiniger wischen oder maschinell reinigen.</li>
