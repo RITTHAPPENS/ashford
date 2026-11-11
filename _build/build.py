@@ -29,7 +29,7 @@ PRODUCTS = [
      'Schützt verdichtete und polierte Böden vor Flecken durch Öl, Fett und viele andere Flüssigkeiten, ohne die Optik zu verändern.'),
     ('retropel', 'RetroPel', 'Schützen', 'packshot-retropel.png', False,
      'Macht Beton öl- und wasserabweisend. Verschüttetes perlt ab und lässt sich aufnehmen, bevor es einzieht.'),
-    ('creteclean', 'CreteClean', 'Pflegen', 'packshot-creteclean.png', False,
+    ('creteclean', 'CreteClean Plus', 'Pflegen', 'packshot-creteclean.png', False,
      'Ein Reiniger, der auf Beton abgestimmt ist. Er hält verdichtete und polierte Böden sauber und greift die Oberfläche nicht an.'),
     ('cretefill', 'CreteFill', 'Reparieren', 'packshot-cretefill.png', False,
      'Repariert Ausbrüche, große Risse und beschädigte Fugenkanten. Mit Sand gemischt entsteht ein sehr fester Polymerbeton, der schnell wieder belastbar ist.'),
@@ -364,7 +364,7 @@ FINDER = [
     ('Schutz vor Öl, Fett und Flecken', 'retroguard', 'RetroGuard'),
     ('Wasser und Schmutz sollen abperlen', 'retropel', 'RetroPel'),
     ('Fugen oder Kanten sind ausgebrochen', 'cretefill', 'CreteFill'),
-    ('Der Boden soll täglich richtig gereinigt werden', 'creteclean', 'CreteClean'),
+    ('Der Boden soll täglich richtig gereinigt werden', 'creteclean', 'CreteClean Plus'),
 ]
 
 
@@ -372,7 +372,7 @@ def products_page():
     p = '../'
     by = {pr[0]: pr for pr in PRODUCTS}
     h = head(p, 'Produkte | Ashford Formula Deutschland',
-             'Ashford Formula, RetroPlate, RetroGuard, RetroPel, CreteClean und CreteFill: das abgestimmte System von Curecrete für Betonböden im Überblick.')
+             'Ashford Formula, RetroPlate, RetroGuard, RetroPel, CreteClean Plus und CreteFill: das abgestimmte System von Curecrete für Betonböden im Überblick.')
     h += header(p, 'produkte')
 
     finder = ''.join(
@@ -420,7 +420,7 @@ def products_page():
     <ol class="system" aria-label="Das System">
       <li><a href="#verdichten"><b>Verdichten</b><span>Ashford Formula, RetroPlate</span></a></li>
       <li><a href="#schuetzen"><b>Schützen</b><span>RetroGuard, RetroPel</span></a></li>
-      <li><a href="#pflegen"><b>Reparieren und pflegen</b><span>CreteFill, CreteClean</span></a></li>
+      <li><a href="#pflegen"><b>Reparieren und pflegen</b><span>CreteFill, CreteClean Plus</span></a></li>
     </ol>
   </div>
 </section>
@@ -556,7 +556,7 @@ def anwendung_page():
       </ul>
     </div>
     <a class="care__product reveal reveal-d1" href="{p}produkte/creteclean/">
-      <div class="care__img"><img src="{p}assets/packshot-creteclean.png" alt="CreteClean Gebinde" loading="lazy"></div>
+      <div class="care__img"><img src="{p}assets/packshot-creteclean.png" alt="CreteClean Plus Gebinde" loading="lazy"></div>
       <div>
         <span class="product__cat">Empfohlen für die Pflege</span>
         <h3>CreteClean Plus</h3>
