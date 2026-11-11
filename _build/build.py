@@ -21,7 +21,7 @@ def ic(name, cls='icon'):
 
 PRODUCTS = [
     # slug, Name, Kategorie, Bild, Foto?, Kurztext
-    ('ashford-formula', 'Ashford Formula', 'Verdichten', 'produkt-ashford.jpg', True,
+    ('ashford-formula', 'Ashford Formula', 'Verdichten', 'packshot-ashford.png', False,
      'Der Klassiker für Industrieböden, im Neubau und im Bestand. Er dringt 3 bis 5 mm tief ein und macht die Oberfläche dauerhaft hart, dicht und staubfrei.'),
     ('retroplate', 'RetroPlate', 'Verdichten und Polieren', 'packshot-retroplate.png', False,
      'Das System für geschliffene und polierte Betonböden. Für neuen Beton genauso wie für ältere Flächen, die wieder gut aussehen sollen.'),
