@@ -622,3 +622,18 @@ p{text-wrap:pretty}
   .dl__meta{display:none}
   .phero__cta .btn{flex:1 1 100%}
 }
+
+/* ---------- Anwendungsvideo + Stratec-Clips ---------- */
+.media{display:grid;grid-template-columns:1fr auto;gap:clamp(16px,2vw,24px);margin-top:clamp(48px,6vw,72px);align-items:stretch}
+.media .video{margin-top:0;aspect-ratio:auto;min-height:320px}
+.media .video img{position:absolute;inset:0}
+.clips{display:flex;flex-direction:column;gap:10px}
+.clips__row{display:grid;grid-template-columns:repeat(2,clamp(150px,13vw,200px));gap:clamp(10px,1.2vw,16px)}
+.clip{display:block;width:100%;aspect-ratio:478/850;object-fit:cover;border-radius:var(--r);background:var(--ink)}
+.clips figcaption{font-size:var(--fs-xs);color:var(--muted)}
+@media (max-width:900px){
+  .media{grid-template-columns:1fr}
+  .media .video{aspect-ratio:4/3;min-height:0}
+  .media .video__play{top:36%}
+  .clips__row{grid-template-columns:1fr 1fr}
+}

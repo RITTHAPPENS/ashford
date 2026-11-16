@@ -502,19 +502,28 @@ def anwendung_page():
       <p class="lead">Im Neubau sind es vier Arbeitsschritte, die direkt an das Glätten des Betons anschließen. Entscheidend sind der richtige Zeitpunkt und eine gleichmäßige Menge.</p>
     </div>
     <ol class="bigsteps">
-      <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-1-aufspruehen.jpg" alt="Ashford Formula wird mit der Sprühlanze auf die Hallenfläche aufgebracht" loading="lazy"></div>
+      <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-1-aufspruehen.jpg" alt="Sprühwagen mit Ashford Formula Fass fährt über die frisch behandelte Hallenfläche" loading="lazy"></div>
         <div class="bigstep__txt"><h3>Aufsprühen</h3><p>Sobald der Beton geglättet ist, wird Ashford Formula gleichmäßig aufgesprüht, bis die Fläche gesättigt ist. Die Menge wird dabei genau gemessen, je nach Saugfähigkeit des Untergrunds rund 150 bis 250 g pro m².</p></div></li>
-      <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-2-verteilen.jpg" alt="Arbeiter verteilen Ashford Formula mit breiten Besen" loading="lazy"></div>
+      <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-2-verteilen.jpg" alt="Stratec Mitarbeiter verteilt Ashford Formula mit einem breiten Besen" loading="lazy"></div>
         <div class="bigstep__txt"><h3>Verteilen</h3><p>Mit breiten, weichen Besen wird das Material über die ganze Fläche verteilt, damit jede Stelle genug aufnimmt. Jetzt beginnt die Reaktion im Beton.</p></div></li>
       <li class="bigstep reveal"><div class="bigstep__img"><img src="{p}assets/schritt-3-fugen.jpg" alt="Fugenschneider mit Absaugung auf einem Betonboden" loading="lazy"></div>
         <div class="bigstep__txt"><h3>Fugen schneiden</h3><p>Beim Fugenschnitt wird der entstehende Schlamm direkt abgesaugt. So bleiben die Fugen sauber und lassen sich später gut verfüllen, zum Beispiel mit CreteFill.</p></div></li>
-      <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-4-reinigen.jpg" alt="Fertige Hallenfläche nach der maschinellen Reinigung" loading="lazy"></div>
+      <li class="bigstep reveal reveal-d1"><div class="bigstep__img"><img src="{p}assets/schritt-4-reinigen.jpg" alt="Scheuersaugmaschinen reinigen die behandelte Hallenfläche" loading="lazy"></div>
         <div class="bigstep__txt"><h3>Reinigen und übergeben</h3><p>Zum Abschluss wird die gesamte Fläche maschinell gereinigt. Danach ist der Boden fertig und kann genutzt werden.</p></div></li>
     </ol>
-    <div class="video reveal" id="video" role="button" tabindex="0" aria-label="Anwendungsvideo auf YouTube abspielen" data-yt="qfEuiGrz6tM">
-      <img src="{p}assets/video-poster.jpg" alt="" loading="lazy">
-      <span class="video__play">{ic('play')}</span>
-      <div class="video__label"><b>Anwendung im Video</b><span>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</span></div>
+    <div class="media reveal">
+      <div class="video" id="video" role="button" tabindex="0" aria-label="Anwendungsvideo auf YouTube abspielen" data-yt="qfEuiGrz6tM">
+        <img src="{p}assets/video-poster.jpg" alt="" loading="lazy">
+        <span class="video__play">{ic('play')}</span>
+        <div class="video__label"><b>Anwendung im Video</b><span>Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an YouTube übertragen.</span></div>
+      </div>
+      <figure class="clips">
+        <div class="clips__row">
+          <video class="clip" src="{p}assets/video/stratec-1.mp4" poster="{p}assets/video/stratec-1.jpg" muted loop playsinline preload="none" aria-label="Stratec Mitarbeiter verteilt Ashford Formula mit dem Besen"></video>
+          <video class="clip" src="{p}assets/video/stratec-2.mp4" poster="{p}assets/video/stratec-2.jpg" muted loop playsinline preload="none" aria-label="Sprühwagen von Stratec bringt Ashford Formula auf die Hallenfläche auf"></video>
+        </div>
+        <figcaption>Stratec bei der Arbeit, ohne Ton</figcaption>
+      </figure>
     </div>
   </div>
 </section>

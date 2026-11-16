@@ -229,8 +229,10 @@ def product_page(slug):
 # ----------------------------------------------------------------------
 PROJECTS = [
     # Bild(er), Titel, Ort, Produkte, Fläche, Klasse
+    (['stratec-halle-%d' % i for i in range(1, 9)],
+     'Logistikhalle', 'Ausführung durch Stratec Industrieboden', 'Ashford Formula', None, 'feature'),
     (['classic-depot-wien-1', 'classic-depot-wien-2', 'classic-depot-wien-3', 'classic-depot-wien-4', 'classic-depot-wien-5'],
-     'Classic Depot', 'Wien, Österreich', 'RetroPlate, RetroPel', '2.500 m²', 'feature'),
+     'Classic Depot', 'Wien, Österreich', 'RetroPlate, RetroPel', '2.500 m²', ''),
     (['sew-eurodrive-1', 'sew-eurodrive-2'], 'SEW-EURODRIVE', 'Produktionshalle', 'Ashford Formula', None, ''),
     (['supermarkt-flower-mound'], 'Supermarkt', 'Flower Mound, Texas, USA', 'RetroPlate, RetroGuard, CreteFill', 'ca. 3.970 m²', 'tall'),
     (['costco-bundamba'], 'Costco', 'Bundamba, Australien', 'RetroPlate', '9.000 m²', ''),
@@ -238,10 +240,10 @@ PROJECTS = [
     (['cafe-brunei-1', 'cafe-brunei-2'], 'Café Hungry Hippo', 'Brunei', 'Ashford Formula, RetroPlate', None, ''),
     (['autohaus-salisbury'], 'VW-Autohaus', 'Salisbury, Maryland, USA', 'RetroPlate', None, ''),
     (['costco-madrid'], 'Costco', 'Madrid, Spanien', 'Produkte von Curecrete', None, ''),
-    (['gaestehaus-china'], 'Gästehaus', 'China', 'Ashford Formula, RetroPlate', None, 'tall'),
+    (['gaestehaus-china'], 'Gästehaus', 'China', 'Ashford Formula, RetroPlate', None, ''),
     (['parkland-dallas'], 'Bürogebäude', 'Dallas, Texas, USA', 'RetroPlate, CreteFill', None, ''),
     (['parkdeck-monterrey'], 'Parkdeck', 'Monterrey, Mexiko', 'Produkte von Curecrete', None, ''),
-    (['logistikhalle'], 'Logistikhalle', 'Neubau', 'Ashford Formula', None, ''),
+    (['logistikhalle'], 'Industriehalle', 'Neubau', 'Ashford Formula', None, ''),
     (['showroom'], 'Autoshowroom', 'Polierter Betonboden', 'Produkte von Curecrete', None, ''),
 ]
 

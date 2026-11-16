@@ -85,3 +85,15 @@ if (vid) {
   vid.addEventListener('click', load);
   vid.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); load(); } });
 }
+
+/* Stratec-Clips: stumm abspielen, solange sie sichtbar sind. Bei reduzierter Bewegung nur auf Klick. */
+(() => {
+  const clips = document.querySelectorAll('video.clip');
+  if (!clips.length) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { clips.forEach(v => v.controls = true); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { v.preload = 'auto'; v.play().catch(() => { v.controls = true; }); } else v.pause();
+  }), { threshold: .35 });
+  clips.forEach(v => io.observe(v));
+})();
