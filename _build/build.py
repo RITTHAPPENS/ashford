@@ -155,7 +155,7 @@ def home():
   <div class="hero__media"><img src="assets/hero-halle.jpg" alt="" fetchpriority="high"></div>
   <div class="wrap">
     <h1><span>Betonböden, die hart bleiben.</span> <span>Und <em>staubfrei</em>.</span></h1>
-    <p>Ashford Formula zieht in die Betonoberfläche ein und macht sie dauerhaft abriebfest und staubbindend. Eine Behandlung, die über Jahrzehnte wirkt.</p>
+    <p>Ashford Formula zieht in die Betonoberfläche ein und macht sie dauerhaft abriebfest und staubabweisend. Eine Behandlung, die über Jahrzehnte wirkt.</p>
     <div class="hero__cta">
       <a href="#kontakt" class="btn btn--red">Projekt anfragen {ic('arrow-right')}</a>
       <a href="anwendung/" class="btn btn--light">So wirkt es</a>
@@ -201,7 +201,7 @@ def home():
     </div>
     <div class="extras">
       <div class="extra reveal">{ic('clock-counter-clockwise')}<h3>Einmal behandeln</h3><p>Die Wirkung bleibt im Beton. Kein Nachstreichen, keine neue Beschichtung nach ein paar Jahren.</p></div>
-      <div class="extra reveal reveal-d1">{ic('broom')}<h3>Leicht zu reinigen</h3><p>Auf der geschlossenen Oberfläche hält sich Schmutz schlecht. Eine Scheuersaugmaschine genügt.</p></div>
+      <div class="extra reveal reveal-d1">{ic('broom')}<h3>Leicht zu reinigen</h3><p>Glatte, geschlossene Oberfläche: Schmutz setzt sich nicht fest, eine Scheuersaugmaschine genügt.</p></div>
       <div class="extra reveal reveal-d2">{ic('shield-check')}<h3>20 Jahre Garantie</h3><p>Übernimmt ein zertifizierter Fachbetrieb die Ausführung, gibt es auf Wunsch eine Garantieerklärung.</p></div>
       <div class="extra reveal reveal-d3">{ic('leaf')}<h3>Wasserbasiert</h3><p>Frei von Lösemitteln und flüchtigen organischen Stoffen. Keine schädlichen Dämpfe bei der Verarbeitung.</p></div>
     </div>
